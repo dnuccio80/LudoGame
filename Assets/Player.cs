@@ -8,15 +8,8 @@ public class Player : MonoBehaviour
 
     [SerializeField] private Transform[] ways;
 
-    private Animator animator;
-
     int index = -1;
     bool canMove = false;
-
-    private void Awake()
-    {
-        animator = GetComponent<Animator>();
-    }
 
     private void Update()
     {
@@ -30,12 +23,11 @@ public class Player : MonoBehaviour
 
     private void Move()
     {
+        float jumpPower = .5f;
+        int numJumps = 1;
+        float duration = .3f;
 
-        animator.SetTrigger("Move");
-
-        transform.DOMove(ways[index].transform.position, .3f)
-            .SetEase(Ease.Linear);
-
+        transform.DOLocalJump(ways[index].transform.position, jumpPower, numJumps, duration);
     }
 
 }
