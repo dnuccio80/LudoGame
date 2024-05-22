@@ -4,14 +4,22 @@ using UnityEngine;
 
 public class DiceContainer : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private ColorPlayer colorPlayer;
+
+    private enum ColorPlayer
     {
-        
+        Green,
+        LightBlue,
+        Red,
+        Yellow
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
+    {
+        HandleTurns.instance.OnStateChanged += HandleTurns_OnStateChanged;
+    }
+
+    private void HandleTurns_OnStateChanged(object sender, HandleTurns.OnStateChangedEventArgs e)
     {
         
     }

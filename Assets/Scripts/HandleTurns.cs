@@ -1,18 +1,23 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Resources;
 using UnityEngine;
 
 public class HandleTurns : MonoBehaviour
 {
+
+    public static HandleTurns instance {  get; private set; }
+
     public event EventHandler<OnStateChangedEventArgs> OnStateChanged;
 
-    public class OnStateChangedEventArgs
+    public class OnStateChangedEventArgs : EventArgs
     {
-        private State state;
+       public GameState state;
     }
 
-    private enum State
+
+    public enum GameState
     {
         WaitingForRed,
         WaitingForGreen,
@@ -20,7 +25,12 @@ public class HandleTurns : MonoBehaviour
         WaitingForYellow
     }
 
-    private State currentState;
+    public GameState currentState;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     private void Update()
     {
@@ -33,16 +43,19 @@ public class HandleTurns : MonoBehaviour
     private void ChangeState()
     {
         currentState++;
-        int totalStates = State.GetValues(typeof(State)).Length;
+        int totalStates = GameState.GetValues(typeof(GameState)).Length;
         int gameStateIndex = GetEnumIndex(currentState);
 
-        if (gameStateIndex == -1) currentState = GetFirstEnumState<State>();
-        Debug.Log(currentState);
+        if (gameStateIndex == -1) currentState = GetFirstEnumState<GameState>();
+        OnStateChanged?.Invoke(this, new OnStateChangedEventArgs
+        {
+            state = currentState
+        }) ;
     }
 
-    private int GetEnumIndex(State state)
+    private int GetEnumIndex(GameState state)
     {
-        State[] enumValues = (State[])Enum.GetValues(typeof(State));
+        GameState[] enumValues = (GameState[])Enum.GetValues(typeof(GameState));
 
         int index = Array.IndexOf(enumValues, state);
 
@@ -58,5 +71,9 @@ public class HandleTurns : MonoBehaviour
         return enumValues[0];
     }
 
+    public bool IsGreenTurn()
+    {
+        return currentState == GameState.WaitingForGreen;
+    }
 
 }
