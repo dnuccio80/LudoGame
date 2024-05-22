@@ -4875,7 +4875,7 @@ GameObject:
   - component: {fileID: 2059457595}
   - component: {fileID: 2059457596}
   m_Layer: 0
-  m_Name: HandleTurns
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4976,12 +4976,12 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
+  - {fileID: 2059457595}
   - {fileID: 1604266101}
   - {fileID: 1854783183}
   - {fileID: 284669079}
   - {fileID: 727587263}
   - {fileID: 1803597208}
-  - {fileID: 2059457595}
   - {fileID: 261398567}
   - {fileID: 1403611861}
   - {fileID: 376039390}

@@ -4,28 +4,22 @@ using System.Collections.Generic;
 using System.Resources;
 using UnityEngine;
 
-public class HandleTurns : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
 
-    public static HandleTurns instance {  get; private set; }
+    public static GameManager instance {  get; private set; }
 
-    public event EventHandler<OnStateChangedEventArgs> OnStateChanged;
+    public event EventHandler OnStateChanged;
 
-    public class OnStateChangedEventArgs : EventArgs
+    private enum GameState
     {
-       public GameState state;
+        TurnForRed,
+        TurnForGreen,
+        TurnForYellow,
+        TurnForLightBlue
     }
 
-
-    public enum GameState
-    {
-        WaitingForRed,
-        WaitingForGreen,
-        WaitingForLightBlue,
-        WaitingForYellow
-    }
-
-    public GameState currentState;
+    private GameState currentState;
 
     private void Awake()
     {
@@ -47,10 +41,7 @@ public class HandleTurns : MonoBehaviour
         int gameStateIndex = GetEnumIndex(currentState);
 
         if (gameStateIndex == -1) currentState = GetFirstEnumState<GameState>();
-        OnStateChanged?.Invoke(this, new OnStateChangedEventArgs
-        {
-            state = currentState
-        }) ;
+        OnStateChanged?.Invoke(this, EventArgs.Empty);
     }
 
     private int GetEnumIndex(GameState state)
@@ -71,9 +62,24 @@ public class HandleTurns : MonoBehaviour
         return enumValues[0];
     }
 
+    public bool IsYellowTurn()
+    {
+        return currentState == GameState.TurnForYellow;
+    }
+
     public bool IsGreenTurn()
     {
-        return currentState == GameState.WaitingForGreen;
+        return currentState == GameState.TurnForGreen;
+    }
+
+    public bool IsRedTurn()
+    {
+        return currentState == GameState.TurnForRed;
+    }
+
+    public bool IsLightBlueTurn()
+    {
+        return currentState == GameState.TurnForLightBlue;
     }
 
 }
