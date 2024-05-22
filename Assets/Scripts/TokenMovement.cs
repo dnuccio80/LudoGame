@@ -23,7 +23,7 @@ public class TokenMovement : MonoBehaviour
 
     private void Move()
     {
-        float jumpPower = .5f;
+        float jumpPower = .4f;
         int numJumps = 1;
         float duration = .3f;
 
