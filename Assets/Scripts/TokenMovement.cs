@@ -8,26 +8,40 @@ public class TokenMovement : MonoBehaviour
 
     [SerializeField] private Transform[] ways;
 
-    int index = -1;
-    bool canMove = false;
+    private int index = -1;
+    private bool canMove = false;
+    private int movesNumber;
 
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.E))
         {
             index++;
-            Move();
+            MoveOnce();
         }
         
     }
 
-    private void Move()
+    public void MoveOnce()
+    {
+        movesNumber = GameManager.instance.GetDieNumber();
+        Debug.Log(movesNumber);
+        StartCoroutine(Moves());
+    }
+
+    IEnumerator Moves()
     {
         float jumpPower = .4f;
-        int numJumps = 1;
         float duration = .3f;
+        int numJumps = 1;
 
-        transform.DOLocalJump(ways[index].transform.position, jumpPower, numJumps, duration);
+        for (int i = 0; i < movesNumber; i++)
+        {
+            index++;
+            transform.DOLocalJump(ways[index].transform.position, jumpPower, numJumps, duration);
+            yield return new WaitForSeconds(duration);
+        }
+
     }
 
 }
