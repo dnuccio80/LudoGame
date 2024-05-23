@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 4646078701463656548}
   - component: {fileID: 4196237718845190901}
   m_Layer: 0
-  m_Name: RedTokenVisual
+  m_Name: TokenVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -361,7 +361,7 @@ GameObject:
   - component: {fileID: 2158063019037591680}
   - component: {fileID: 4354084574085185068}
   m_Layer: 0
-  m_Name: Token
+  m_Name: _OriginalToken
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

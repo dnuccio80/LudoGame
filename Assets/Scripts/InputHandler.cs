@@ -23,7 +23,7 @@ public class InputHandler : MonoBehaviour
         if (!rayHit.collider) return;
 
         if(rayHit.collider.gameObject.TryGetComponent(out TokenMovement token)){
-            token.MoveOnce();
+            token.Move();
         }
     }
 

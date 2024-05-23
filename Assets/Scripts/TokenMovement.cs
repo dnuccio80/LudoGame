@@ -11,22 +11,19 @@ public class TokenMovement : MonoBehaviour
     private int index = -1;
     private bool canMove = false;
     private int movesNumber;
+    private bool isOutHouse;
 
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.E))
-        {
-            index++;
-            MoveOnce();
-        }
-        
-    }
-
-    public void MoveOnce()
+    public void Move()
     {
         movesNumber = GameManager.instance.GetDieNumber();
         Debug.Log(movesNumber);
-        StartCoroutine(Moves());
+
+        if(isOutHouse) StartCoroutine(Moves());
+        else
+        {
+            if (movesNumber != 6) return; 
+            MoveOutOfHouse();
+        } 
     }
 
     IEnumerator Moves()
@@ -42,6 +39,15 @@ public class TokenMovement : MonoBehaviour
             yield return new WaitForSeconds(duration);
         }
 
+    }
+
+    private void MoveOutOfHouse()
+    {
+        isOutHouse = true;
+        index++;
+        float duration = .3f;
+        transform.DOLocalMove(ways[index].transform.position, duration)
+            .SetEase(Ease.Linear);
     }
 
 }
