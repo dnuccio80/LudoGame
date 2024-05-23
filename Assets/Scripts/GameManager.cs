@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
 
     public event EventHandler OnStateChanged;
 
-    private int randomDiceNumber;
+    private int randomDieNumber;
 
     private enum GameState
     {
@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
 
         if(Input.GetKeyUp(KeyCode.C))
         {
-            randomDiceNumber = UnityEngine.Random.Range(1, 7);
+            randomDieNumber = UnityEngine.Random.Range(1, 7);
         }
     }
 
@@ -89,9 +89,14 @@ public class GameManager : MonoBehaviour
         return currentState == GameState.TurnForLightBlue;
     }
 
+    public void SetDieNumber(int dieNumber)
+    {
+        randomDieNumber = dieNumber; 
+    }
+
     public int GetDieNumber()
     {
-        return randomDiceNumber;
+        return randomDieNumber;
     }
 
 }
