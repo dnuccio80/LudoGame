@@ -23,12 +23,12 @@ public class InputHandler : MonoBehaviour
         if (!rayHit.collider) return;
 
         if(rayHit.collider.gameObject.TryGetComponent(out TokenMovement token)){
-            token.Move();
+            token.MovePiece();
         }
 
         if(rayHit.collider.gameObject.TryGetComponent(out DiceLogic die))
         {
-            die.RollDie();
+            die.TryRollDice();
         }
     }
 

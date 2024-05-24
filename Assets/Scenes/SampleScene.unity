@@ -512,7 +512,7 @@ GameObject:
   - component: {fileID: 170328949}
   - component: {fileID: 170328950}
   m_Layer: 0
-  m_Name: Die
+  m_Name: Dice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -642,6 +642,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a502eaa0c7b5f8f46bb5169754004625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  diceNumbersSpriteArray:
+  - {fileID: 21300000, guid: fd474c2f0d879a944a14b5c3734da104, type: 3}
+  - {fileID: 21300000, guid: a125d5b502b38aa4989cf2ec137a5344, type: 3}
+  - {fileID: 21300000, guid: c4f921c35f6306a49b2684af1399b318, type: 3}
+  - {fileID: 21300000, guid: 0a4b4017be1881844886bfa0579e8b4f, type: 3}
+  - {fileID: 21300000, guid: fb49a20e8f9f1f64d8eb913b7e9ba6ad, type: 3}
+  - {fileID: 21300000, guid: 2861b54f55b04704dbcd97988d9fc630, type: 3}
 --- !u!1 &170958225
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,7 +662,7 @@ GameObject:
   - component: {fileID: 170958228}
   - component: {fileID: 170958229}
   m_Layer: 0
-  m_Name: Die
+  m_Name: Dice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -785,6 +792,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a502eaa0c7b5f8f46bb5169754004625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  diceNumbersSpriteArray:
+  - {fileID: 21300000, guid: fd474c2f0d879a944a14b5c3734da104, type: 3}
+  - {fileID: 21300000, guid: a125d5b502b38aa4989cf2ec137a5344, type: 3}
+  - {fileID: 21300000, guid: c4f921c35f6306a49b2684af1399b318, type: 3}
+  - {fileID: 21300000, guid: 0a4b4017be1881844886bfa0579e8b4f, type: 3}
+  - {fileID: 21300000, guid: fb49a20e8f9f1f64d8eb913b7e9ba6ad, type: 3}
+  - {fileID: 21300000, guid: 2861b54f55b04704dbcd97988d9fc630, type: 3}
 --- !u!1 &171389913
 GameObject:
   m_ObjectHideFlags: 0
@@ -1071,7 +1085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faca88be602f22442beb41057f3beef7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorPlayer: 1
+  playerSO: {fileID: 11400000, guid: c174b65c00c795b47919326e1dfd2204, type: 2}
 --- !u!1 &284669077
 GameObject:
   m_ObjectHideFlags: 0
@@ -1372,7 +1386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faca88be602f22442beb41057f3beef7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorPlayer: 2
+  playerSO: {fileID: 11400000, guid: 6f123a4fe7a55c340935c47e6417f2c3, type: 2}
 --- !u!212 &376039389
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2613,7 +2627,7 @@ GameObject:
   - component: {fileID: 709916865}
   - component: {fileID: 709916866}
   m_Layer: 0
-  m_Name: Die
+  m_Name: Dice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2743,6 +2757,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a502eaa0c7b5f8f46bb5169754004625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  diceNumbersSpriteArray:
+  - {fileID: 21300000, guid: fd474c2f0d879a944a14b5c3734da104, type: 3}
+  - {fileID: 21300000, guid: a125d5b502b38aa4989cf2ec137a5344, type: 3}
+  - {fileID: 21300000, guid: c4f921c35f6306a49b2684af1399b318, type: 3}
+  - {fileID: 21300000, guid: 0a4b4017be1881844886bfa0579e8b4f, type: 3}
+  - {fileID: 21300000, guid: fb49a20e8f9f1f64d8eb913b7e9ba6ad, type: 3}
+  - {fileID: 21300000, guid: 2861b54f55b04704dbcd97988d9fc630, type: 3}
 --- !u!1 &712302451
 GameObject:
   m_ObjectHideFlags: 0
@@ -3061,7 +3082,7 @@ GameObject:
   - component: {fileID: 903581608}
   - component: {fileID: 903581609}
   m_Layer: 0
-  m_Name: Die
+  m_Name: Dice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3191,6 +3212,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a502eaa0c7b5f8f46bb5169754004625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  diceNumbersSpriteArray:
+  - {fileID: 21300000, guid: fd474c2f0d879a944a14b5c3734da104, type: 3}
+  - {fileID: 21300000, guid: a125d5b502b38aa4989cf2ec137a5344, type: 3}
+  - {fileID: 21300000, guid: c4f921c35f6306a49b2684af1399b318, type: 3}
+  - {fileID: 21300000, guid: 0a4b4017be1881844886bfa0579e8b4f, type: 3}
+  - {fileID: 21300000, guid: fb49a20e8f9f1f64d8eb913b7e9ba6ad, type: 3}
+  - {fileID: 21300000, guid: 2861b54f55b04704dbcd97988d9fc630, type: 3}
 --- !u!1 &906831462
 GameObject:
   m_ObjectHideFlags: 0
@@ -4520,7 +4548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faca88be602f22442beb41057f3beef7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorPlayer: 3
+  playerSO: {fileID: 11400000, guid: c2a9f9b9a0bc5ff4db76bcb6b0ba2fed, type: 2}
 --- !u!212 &1403611860
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5290,7 +5318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faca88be602f22442beb41057f3beef7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorPlayer: 0
+  playerSO: {fileID: 11400000, guid: 627eb1d5985c2534ca01daa0f53b507b, type: 2}
 --- !u!212 &1718140716
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5936,6 +5964,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3711cf5e9f93f2e459c85e431a9eaa8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  players:
+  - {fileID: 11400000, guid: c174b65c00c795b47919326e1dfd2204, type: 2}
+  - {fileID: 11400000, guid: 6f123a4fe7a55c340935c47e6417f2c3, type: 2}
+  - {fileID: 11400000, guid: 627eb1d5985c2534ca01daa0f53b507b, type: 2}
+  - {fileID: 11400000, guid: c2a9f9b9a0bc5ff4db76bcb6b0ba2fed, type: 2}
+  currentState: 0
 --- !u!1 &2077483618
 GameObject:
   m_ObjectHideFlags: 0
@@ -6013,7 +6047,7 @@ SceneRoots:
   - {fileID: 376039390}
   - {fileID: 1718140717}
   - {fileID: 2021539985}
+  - {fileID: 482791651}
   - {fileID: 1008353093}
   - {fileID: 678184347}
-  - {fileID: 482791651}
   - {fileID: 1041573490}

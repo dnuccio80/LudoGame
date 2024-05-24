@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class TokenMovement : MonoBehaviour
+public class TokenScript : MonoBehaviour
 {
 
     [SerializeField] private Transform[] ways;
@@ -13,7 +13,10 @@ public class TokenMovement : MonoBehaviour
     private int movesNumber;
     private bool isOutHouse;
 
-
+    private void Start()
+    {
+        
+    }
 
     public void MovePiece()
     {
