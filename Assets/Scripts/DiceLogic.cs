@@ -1,16 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEditor.Search;
 using UnityEngine;
 
 public class DiceLogic : MonoBehaviour
 {
-
     private DiceContainer diceContainer;
     [SerializeField] private Sprite[] diceNumbersSpriteArray;
-
-
-    private bool canRollDice;
 
     private void Awake()
     {
@@ -19,33 +17,22 @@ public class DiceLogic : MonoBehaviour
 
     private void Start()
     {
-        GameManager.instance.OnRollDiceGameState += GameManager_OnRollDiceGameState;
+        GameManager.instance.OnGameStateChanged += GameManager_OnGameStateChanged;
+        Hide();
     }
 
-    private void GameManager_OnRollDiceGameState(object sender, System.EventArgs e)
+    private void GameManager_OnGameStateChanged(object sender, System.EventArgs e)
     {
-        canRollDice = diceContainer.GetPlayerColor() == GameManager.instance.GetCurrentPlayer();
+        (diceContainer.GetPlayerColor() == GameManager.instance.GetCurrentPlayer() ? (Action)Show : Hide)();
 
-        if(canRollDice)
-        {
-            Show();
-        } else
-        {
-            Hide();
-        }
+        if (GameManager.instance.IsMovePieceState()) GetComponent<SpriteRenderer>().sprite = diceNumbersSpriteArray[GameManager.instance.GetDiceNumberRolled() - 1];
     }
 
-    public void TryRollDice()
+    public void RollDice()
     {
-        if (!canRollDice) return;
-
-        int minDieNumber = 1;
-        int maxDieNumber = 7;
-
-        int dieNumber = Random.Range(minDieNumber, maxDieNumber);
-        GetComponent<SpriteRenderer>().sprite = diceNumbersSpriteArray[dieNumber - 1];
-        Debug.Log(dieNumber);
-
+        if (!diceContainer.CanDiceBeRolled()) return;
+        GameManager.instance.RollDice();
+        diceContainer.DiceRolled();
     }
 
     private void Show()

@@ -17,19 +17,17 @@ public class ArrowVisual : MonoBehaviour
     void Start()
     {
         MoveArrow();
-        GameManager.instance.OnRollDiceGameState += GameManager_OnRollDiceGameState;
+        GameManager.instance.OnGameStateChanged += GameManager_OnGameStateChanged;
         Hide();
     }
 
-    private void GameManager_OnRollDiceGameState(object sender, EventArgs e)
+
+    private void GameManager_OnGameStateChanged(object sender, EventArgs e)
     {
-        if(diceContainer.GetPlayerColor() == GameManager.instance.GetCurrentPlayer())
-        {
-            Show();
-        } else
-        {
-            Hide();
-        }
+        (diceContainer.GetPlayerColor() == GameManager.instance.GetCurrentPlayer() ? (Action) Show : Hide)();
+
+        if (!GameManager.instance.IsRollDiceState()) Hide();
+ 
     }
 
     public void MoveArrow()

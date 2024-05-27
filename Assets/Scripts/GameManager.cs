@@ -13,14 +13,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private PlayerSO[] players;
 
 
-    public event EventHandler OnRollDiceGameState;
-    public event EventHandler OnMovePieceGameState;
-
+    public event EventHandler OnGameStateChanged;
 
     public enum GameState
     {
         RollDice,
         MovePiece,
+        MovingPiece,
         EndTurn
     }
 
@@ -28,7 +27,7 @@ public class GameManager : MonoBehaviour
 
     private int currentPlayer = 0;
     private int numPlayers = 4;
-    private int diceRoll = 0;
+    private int diceNumberRolled = 0;
 
     private string currentPlayerColor;
 
@@ -56,7 +55,7 @@ public class GameManager : MonoBehaviour
                 break;
 
             case GameState.MovePiece:
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButtonDown(1))
                 {
                     MovePiece();
                 }
@@ -70,30 +69,28 @@ public class GameManager : MonoBehaviour
 
     void StartTurn()
     {
-        //Debug.Log("Turn Player: " + (currentPlayer + 1));
         currentState = GameState.RollDice;
-        OnRollDiceGameState?.Invoke(this, EventArgs.Empty);
-        GetCurrentPlayer();
+        OnGameStateChanged?.Invoke(this, EventArgs.Empty);
     }
 
-    void RollDice()
+    public void RollDice()
     {
-        diceRoll = UnityEngine.Random.Range(1, 7); // Simula una tirada de dado de 6 caras
-        //Debug.Log("Player " + (currentPlayer + 1) + " rolled the dice and got a " + diceRoll);
+        int minDieNumber = 1;
+        int maxDieNumber = 7;
+
+        diceNumberRolled = UnityEngine.Random.Range(minDieNumber, maxDieNumber);
         currentState = GameState.MovePiece;
-        OnMovePieceGameState?.Invoke(this, EventArgs.Empty);
+        OnGameStateChanged?.Invoke(this, EventArgs.Empty);
     }
 
     void MovePiece()
     {
-        // Aquí implementa la lógica para mover la ficha según el valor de diceRoll
-        //Debug.Log("Player " + (currentPlayer + 1) + " move her piece " + diceRoll + " spaces");
         currentState = GameState.EndTurn;
     }
 
-    void EndTurn()
+    public void EndTurn()
     {
-        currentPlayer = (currentPlayer + 1) % numPlayers;
+        if(diceNumberRolled != 6) currentPlayer = (currentPlayer + 1) % numPlayers;
         currentState = GameState.RollDice;
         StartTurn();
     }
@@ -115,6 +112,26 @@ public class GameManager : MonoBehaviour
         return currentPlayerColor;
     }
 
+    public void MovingPiece()
+    {
+        currentState = GameState.MovingPiece;
+        OnGameStateChanged?.Invoke(this, EventArgs.Empty);
+    }
+
+    public bool IsRollDiceState()
+    {
+        return currentState == GameState.RollDice;
+    }
+
+    public bool IsMovePieceState()
+    {
+        return currentState == GameState.MovePiece;
+    }
+
+    public int GetDiceNumberRolled()
+    {
+        return diceNumberRolled;
+    }
 
 
 
