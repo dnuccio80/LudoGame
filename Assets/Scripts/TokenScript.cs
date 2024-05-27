@@ -7,6 +7,7 @@ public class TokenScript : MonoBehaviour
 {
 
     [SerializeField] private Transform[] ways;
+    [SerializeField] private PlayerSO playerSO;
 
     private int index = -1;
     private bool canMove = false;

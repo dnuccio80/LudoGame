@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2158063019037591680, guid: d377ef95f6d4d6848b32a0edc36eb171, type: 3}
+      propertyPath: playerSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 6f123a4fe7a55c340935c47e6417f2c3, type: 2}
     - target: {fileID: 4994679167406065525, guid: d377ef95f6d4d6848b32a0edc36eb171, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -50,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8759512747869140513, guid: d377ef95f6d4d6848b32a0edc36eb171, type: 3}
       propertyPath: m_Name
-      value: Token
+      value: RedToken
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
