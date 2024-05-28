@@ -11,8 +11,7 @@ public class TokenScript : MonoBehaviour
     [SerializeField] private Transform[] ways;
     [SerializeField] private PlayerSO playerSO;
     
-    private int index = -1;
-    private int movesNumber;
+    private int index;
     private bool isOutHouse;
 
     private enum State
@@ -27,6 +26,15 @@ public class TokenScript : MonoBehaviour
     {
         GameManager.instance.OnGameStateChanged += GameManager_OnGameStateChanged;
         currentState = State.cannotMove;
+        transform.position = ways[0].transform.position;    
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.K))
+        {
+            StartCoroutine(BackToHouse());
+        }
     }
 
     private void GameManager_OnGameStateChanged(object sender, System.EventArgs e)
@@ -74,7 +82,7 @@ public class TokenScript : MonoBehaviour
         float duration = .3f;
         int numJumps = 1;
 
-        GameManager.instance.MovingPiece();
+        GameManager.instance.MovingPiece(); // Put the state on Moving Piece
 
         for (int i = 0; i < GameManager.instance.GetDiceNumberRolled(); i++)
         {
@@ -85,6 +93,18 @@ public class TokenScript : MonoBehaviour
 
         GameManager.instance.EndTurn();
 
+    }
+    IEnumerator BackToHouse()
+    {
+        float duration = .1f;
+        GameManager.instance.MovingPiece(); // Put the state on Moving Piece
+
+        for (int i = index; i >= 0; i--)
+        {
+            transform.DOLocalMove(ways[i].transform.position, duration)
+            .SetEase(Ease.Linear);
+            yield return new WaitForSeconds(duration);
+        }
     }
 
     private void MoveOutOfHouse()
@@ -111,5 +131,6 @@ public class TokenScript : MonoBehaviour
     {
         return playerSO.ColorPlayer;
     }
+
 
 }

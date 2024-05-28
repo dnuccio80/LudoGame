@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Resources;
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -11,7 +12,6 @@ public class GameManager : MonoBehaviour
     public static GameManager instance {  get; private set; }
 
     [SerializeField] private PlayerSO[] players;
-
 
     public event EventHandler OnGameStateChanged;
 
@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     private int currentPlayer = 0;
     private int numPlayers = 4;
     private int diceNumberRolled = 0;
-
+    private int sixRolledQuantity;
     private string currentPlayerColor;
     private bool playerCanPlay;
 
@@ -90,6 +90,16 @@ public class GameManager : MonoBehaviour
         int maxDieNumber = 7;
 
         diceNumberRolled = UnityEngine.Random.Range(minDieNumber, maxDieNumber);
+        if (diceNumberRolled == 6)
+        {
+            sixRolledQuantity++;
+            if (sixRolledQuantity == 3)
+            {
+                EndTurn();
+                return;
+            }
+
+        }
         currentState = GameState.MovePieceState;
         OnGameStateChanged?.Invoke(this, EventArgs.Empty);
     }
@@ -101,7 +111,12 @@ public class GameManager : MonoBehaviour
 
     public void EndTurn()
     {
-        if(diceNumberRolled != 6) currentPlayer = (currentPlayer + 1) % numPlayers;
+        if(diceNumberRolled != 6 || sixRolledQuantity == 3)
+        {
+            currentPlayer = (currentPlayer + 1) % numPlayers;
+            sixRolledQuantity = 0;
+        }
+
         currentState = GameState.RollDiceState;
         StartTurn();
     }
