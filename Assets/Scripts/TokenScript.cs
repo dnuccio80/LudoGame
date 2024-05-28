@@ -13,20 +13,22 @@ public class TokenScript : MonoBehaviour
     
     private int index;
     private bool isOutHouse;
+    private bool isInSecureZone;
 
-    private enum State
+    private enum MoveState
     {
         canMove,
         cannotMove
     }
 
-    private State currentState;
+    private MoveState currentState;
 
     private void Start()
     {
         GameManager.instance.OnGameStateChanged += GameManager_OnGameStateChanged;
-        currentState = State.cannotMove;
-        transform.position = ways[0].transform.position;    
+        currentState = MoveState.cannotMove;
+        transform.position = ways[0].transform.position;
+        isInSecureZone = true;
     }
 
     private void Update()
@@ -51,13 +53,13 @@ public class TokenScript : MonoBehaviour
             if (newPosition >= ways.Length) return; // Pass the ways Array so can not move the token
 
             GameManager.instance.PlayerCanPlay();
-            currentState = State.canMove;
+            currentState = MoveState.canMove;
             OnStateChanged?.Invoke(this, EventArgs.Empty);
 
         } else
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, 0f);
-            currentState = State.cannotMove;
+            currentState = MoveState.cannotMove;
             OnStateChanged?.Invoke(this, EventArgs.Empty);
 
         }
@@ -65,7 +67,7 @@ public class TokenScript : MonoBehaviour
 
     public void TeyMovePiece()
     {
-        if (currentState == State.cannotMove) return;
+        if (currentState == MoveState.cannotMove) return;
 
         if(isOutHouse) StartCoroutine(MovePieceRoutine());
         else
@@ -90,6 +92,15 @@ public class TokenScript : MonoBehaviour
             transform.DOLocalJump(ways[index].transform.position, jumpPower, numJumps, duration);
             yield return new WaitForSeconds(duration);
         }
+        
+        if (ways[index].gameObject.TryGetComponent(out SecureZone secureZone))
+        {
+            isInSecureZone = true;
+        }
+        else
+        {
+            isInSecureZone = false;
+        }
 
         GameManager.instance.EndTurn();
 
@@ -105,6 +116,10 @@ public class TokenScript : MonoBehaviour
             .SetEase(Ease.Linear);
             yield return new WaitForSeconds(duration);
         }
+
+        isInSecureZone = true;
+        isOutHouse = false;
+        index = 0;
     }
 
     private void MoveOutOfHouse()
@@ -124,12 +139,17 @@ public class TokenScript : MonoBehaviour
 
     public bool canMoveToken()
     {
-        return currentState == State.canMove;
+        return currentState == MoveState.canMove;
     }
 
     public string GetColorPlayer()
     {
         return playerSO.ColorPlayer;
+    }
+
+    public bool IsInSecureZone()
+    {
+        return isInSecureZone;
     }
 
 
