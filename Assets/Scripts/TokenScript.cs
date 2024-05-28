@@ -102,9 +102,17 @@ public class TokenScript : MonoBehaviour
             isInSecureZone = false;
         }
 
+
+
         GameManager.instance.EndTurn();
 
     }
+
+    public void EatToken()
+    {
+        StartCoroutine(BackToHouse());
+    }
+
     IEnumerator BackToHouse()
     {
         float duration = .1f;
@@ -136,7 +144,7 @@ public class TokenScript : MonoBehaviour
                 GameManager.instance.EndTurn();
             });
     }
-
+        
     public bool canMoveToken()
     {
         return currentState == MoveState.canMove;
