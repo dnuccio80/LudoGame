@@ -17,8 +17,8 @@ public class GameManager : MonoBehaviour
 
     public enum GameState
     {
-        RollDice,
-        MovePiece,
+        RollDiceState,
+        MovePieceState,
         MovingPiece,
         EndTurn
     }
@@ -30,7 +30,11 @@ public class GameManager : MonoBehaviour
     private int diceNumberRolled = 0;
 
     private string currentPlayerColor;
+    private bool playerCanPlay;
 
+    // Move Piece State stats
+    float movePieceTimer;
+    float movePieceTimerMax = .5f;
 
     private void Awake()
     {
@@ -39,7 +43,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        currentState = GameState.RollDice;
+        currentState = GameState.RollDiceState;
         StartTurn();
     }
 
@@ -47,17 +51,24 @@ public class GameManager : MonoBehaviour
     {
         switch (currentState)
         {
-            case GameState.RollDice:
+            case GameState.RollDiceState:
+                movePieceTimer = movePieceTimerMax;
+                playerCanPlay = false;
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
                     RollDice();
                 }
                 break;
 
-            case GameState.MovePiece:
-                if (Input.GetMouseButtonDown(1))
+            case GameState.MovePieceState:
+                if (!playerCanPlay)
                 {
-                    MovePiece();
+                    movePieceTimer -= Time.deltaTime;
+                    if(movePieceTimer < 0)
+                    {
+                        EndTurn();
+                        break;
+                    }
                 }
                 break;
 
@@ -69,7 +80,7 @@ public class GameManager : MonoBehaviour
 
     void StartTurn()
     {
-        currentState = GameState.RollDice;
+        currentState = GameState.RollDiceState;
         OnGameStateChanged?.Invoke(this, EventArgs.Empty);
     }
 
@@ -79,7 +90,7 @@ public class GameManager : MonoBehaviour
         int maxDieNumber = 7;
 
         diceNumberRolled = UnityEngine.Random.Range(minDieNumber, maxDieNumber);
-        currentState = GameState.MovePiece;
+        currentState = GameState.MovePieceState;
         OnGameStateChanged?.Invoke(this, EventArgs.Empty);
     }
 
@@ -91,7 +102,7 @@ public class GameManager : MonoBehaviour
     public void EndTurn()
     {
         if(diceNumberRolled != 6) currentPlayer = (currentPlayer + 1) % numPlayers;
-        currentState = GameState.RollDice;
+        currentState = GameState.RollDiceState;
         StartTurn();
     }
 
@@ -120,17 +131,22 @@ public class GameManager : MonoBehaviour
 
     public bool IsRollDiceState()
     {
-        return currentState == GameState.RollDice;
+        return currentState == GameState.RollDiceState;
     }
 
     public bool IsMovePieceState()
     {
-        return currentState == GameState.MovePiece;
+        return currentState == GameState.MovePieceState;
     }
 
     public int GetDiceNumberRolled()
     {
         return diceNumberRolled;
+    }
+
+    public void PlayerCanPlay()
+    {
+        playerCanPlay = true;
     }
 
 

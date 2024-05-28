@@ -33,21 +33,29 @@ public class TokenScript : MonoBehaviour
     {
         if (GameManager.instance.IsMovePieceState() && GameManager.instance.GetCurrentPlayer() == playerSO.ColorPlayer)
         {
-            // It´s player turn & is time to move any token
+            // It´s player turn & it is time to move any token
+            transform.position = new Vector3(transform.position.x, transform.position.y, -.3f);
 
             if (!isOutHouse && GameManager.instance.GetDiceNumberRolled() != 6) return;
 
+            int newPosition = index + GameManager.instance.GetDiceNumberRolled(); // Get if we can move between the "ways" array
+
+            if (newPosition >= ways.Length) return; // Pass the ways Array so can not move the token
+
+            GameManager.instance.PlayerCanPlay();
             currentState = State.canMove;
             OnStateChanged?.Invoke(this, EventArgs.Empty);
 
         } else
         {
+            transform.position = new Vector3(transform.position.x, transform.position.y, 0f);
             currentState = State.cannotMove;
             OnStateChanged?.Invoke(this, EventArgs.Empty);
+
         }
     }
 
-    public void MovePiece()
+    public void TeyMovePiece()
     {
         if (currentState == State.cannotMove) return;
 
@@ -97,6 +105,11 @@ public class TokenScript : MonoBehaviour
     public bool canMoveToken()
     {
         return currentState == State.canMove;
+    }
+
+    public string GetColorPlayer()
+    {
+        return playerSO.ColorPlayer;
     }
 
 }
