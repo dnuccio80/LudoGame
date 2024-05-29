@@ -132,6 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8424370}
+  - component: {fileID: 8424371}
   m_Layer: 0
   m_Name: YellowWay
   m_TagString: Untagged
@@ -154,6 +155,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8424371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8424369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &11081287
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,6 +177,7 @@ GameObject:
   m_Component:
   - component: {fileID: 11081288}
   - component: {fileID: 11081289}
+  - component: {fileID: 11081290}
   m_Layer: 0
   m_Name: GreenStar
   m_TagString: Untagged
@@ -198,6 +212,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01b33051e6f0fe94f87aab9a8ed4a35c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11081290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11081287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &24263778
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,6 +233,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 24263779}
+  - component: {fileID: 24263780}
   m_Layer: 0
   m_Name: GreenWay
   m_TagString: Untagged
@@ -229,6 +256,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &24263780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24263778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &52191322
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,6 +277,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 52191323}
+  - component: {fileID: 52191324}
   m_Layer: 0
   m_Name: Way1 (24)
   m_TagString: Untagged
@@ -260,6 +300,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &52191324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52191322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &98649592
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,6 +321,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 98649593}
+  - component: {fileID: 98649594}
+  - component: {fileID: 98649595}
   m_Layer: 0
   m_Name: GreenWay6
   m_TagString: Untagged
@@ -291,6 +345,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &98649594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98649592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &98649595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98649592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be44e351933d31b4da151f2c8fc4fd46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &100099925
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,6 +378,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 100099926}
+  - component: {fileID: 100099927}
   m_Layer: 0
   m_Name: GreenWay4
   m_TagString: Untagged
@@ -322,6 +401,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &100099927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100099925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &112142781
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,6 +422,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 112142782}
+  - component: {fileID: 112142783}
   m_Layer: 0
   m_Name: Way1 (20)
   m_TagString: Untagged
@@ -353,6 +445,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &112142783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112142781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &129795559
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,6 +466,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 129795560}
+  - component: {fileID: 129795561}
   m_Layer: 0
   m_Name: Way1 (16)
   m_TagString: Untagged
@@ -384,6 +489,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &129795561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129795559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &137105693
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,6 +607,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 139533091}
+  - component: {fileID: 139533092}
   m_Layer: 0
   m_Name: RedWay4
   m_TagString: Untagged
@@ -512,6 +630,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &139533092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139533090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &170328946
 GameObject:
   m_ObjectHideFlags: 0
@@ -821,6 +951,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 171389914}
+  - component: {fileID: 171389915}
   m_Layer: 0
   m_Name: Way1 (58)
   m_TagString: Untagged
@@ -843,6 +974,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &171389915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171389913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &177322116
 GameObject:
   m_ObjectHideFlags: 0
@@ -883,6 +1026,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 200746344}
+  - component: {fileID: 200746345}
   m_Layer: 0
   m_Name: Way1 (12)
   m_TagString: Untagged
@@ -905,6 +1049,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &200746345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200746343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &203973378
 GameObject:
   m_ObjectHideFlags: 0
@@ -914,6 +1070,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 203973379}
+  - component: {fileID: 203973380}
   m_Layer: 0
   m_Name: Way1 (2)
   m_TagString: Untagged
@@ -936,6 +1093,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &203973380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203973378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &220417519
 GameObject:
   m_ObjectHideFlags: 0
@@ -976,6 +1145,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 227172025}
+  - component: {fileID: 227172026}
   m_Layer: 0
   m_Name: Way1 (41)
   m_TagString: Untagged
@@ -998,6 +1168,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &227172026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227172024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &236145934
 GameObject:
   m_ObjectHideFlags: 0
@@ -1007,6 +1189,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 236145935}
+  - component: {fileID: 236145936}
   m_Layer: 0
   m_Name: Way1 (43)
   m_TagString: Untagged
@@ -1029,6 +1212,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &236145936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236145934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &242049493
 GameObject:
   m_ObjectHideFlags: 0
@@ -1038,6 +1233,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 242049494}
+  - component: {fileID: 242049495}
   m_Layer: 0
   m_Name: Way1 (39)
   m_TagString: Untagged
@@ -1060,6 +1256,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &242049495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242049493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &261398565
 GameObject:
   m_ObjectHideFlags: 0
@@ -1641,6 +1849,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 286407075}
+  - component: {fileID: 286407076}
   m_Layer: 0
   m_Name: RedWay2
   m_TagString: Untagged
@@ -1663,6 +1872,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &286407076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286407074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &296857577
 GameObject:
   m_ObjectHideFlags: 0
@@ -1672,6 +1893,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 296857578}
+  - component: {fileID: 296857579}
   m_Layer: 0
   m_Name: Way1 (37)
   m_TagString: Untagged
@@ -1694,6 +1916,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &296857579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296857577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &314987817
 GameObject:
   m_ObjectHideFlags: 0
@@ -1703,6 +1937,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 314987818}
+  - component: {fileID: 314987819}
   m_Layer: 0
   m_Name: Way1 (18)
   m_TagString: Untagged
@@ -1725,6 +1960,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &314987819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314987817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &374221631
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2129,6 +2376,7 @@ GameObject:
   m_Component:
   - component: {fileID: 385787038}
   - component: {fileID: 385787039}
+  - component: {fileID: 385787040}
   m_Layer: 0
   m_Name: GreenStart
   m_TagString: Untagged
@@ -2161,6 +2409,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01b33051e6f0fe94f87aab9a8ed4a35c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &385787040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385787037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &386551151
@@ -2615,6 +2875,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 428068007}
+  - component: {fileID: 428068008}
   m_Layer: 0
   m_Name: RedWay
   m_TagString: Untagged
@@ -2637,6 +2898,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &428068008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428068006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &436348070
 GameObject:
   m_ObjectHideFlags: 0
@@ -2647,6 +2920,7 @@ GameObject:
   m_Component:
   - component: {fileID: 436348071}
   - component: {fileID: 436348072}
+  - component: {fileID: 436348073}
   m_Layer: 0
   m_Name: RedStart
   m_TagString: Untagged
@@ -2681,6 +2955,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01b33051e6f0fe94f87aab9a8ed4a35c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &436348073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436348070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &446533229
 GameObject:
   m_ObjectHideFlags: 0
@@ -2690,6 +2976,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 446533230}
+  - component: {fileID: 446533231}
   m_Layer: 0
   m_Name: Way1 (36)
   m_TagString: Untagged
@@ -2712,6 +2999,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &446533231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446533229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &448420622
 GameObject:
   m_ObjectHideFlags: 0
@@ -2722,6 +3021,7 @@ GameObject:
   m_Component:
   - component: {fileID: 448420623}
   - component: {fileID: 448420624}
+  - component: {fileID: 448420625}
   m_Layer: 0
   m_Name: YellowStar
   m_TagString: Untagged
@@ -2756,6 +3056,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01b33051e6f0fe94f87aab9a8ed4a35c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &448420625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448420622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &471426736
 GameObject:
   m_ObjectHideFlags: 0
@@ -2765,6 +3077,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 471426737}
+  - component: {fileID: 471426738}
+  - component: {fileID: 471426739}
   m_Layer: 0
   m_Name: LightBlueWay6
   m_TagString: Untagged
@@ -2787,6 +3101,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &471426738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471426736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &471426739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471426736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be44e351933d31b4da151f2c8fc4fd46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &473761022
 GameObject:
   m_ObjectHideFlags: 0
@@ -2796,6 +3134,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 473761023}
+  - component: {fileID: 473761024}
   m_Layer: 0
   m_Name: Way1 (47)
   m_TagString: Untagged
@@ -2818,6 +3157,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &473761024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473761022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &482791651
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3121,6 +3472,7 @@ GameObject:
   m_Component:
   - component: {fileID: 496974161}
   - component: {fileID: 496974162}
+  - component: {fileID: 496974163}
   m_Layer: 0
   m_Name: YellowStart
   m_TagString: Untagged
@@ -3153,6 +3505,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01b33051e6f0fe94f87aab9a8ed4a35c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &496974163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496974160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &519420028
@@ -3349,6 +3713,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 614239784}
+  - component: {fileID: 614239785}
   m_Layer: 0
   m_Name: YellowWay5
   m_TagString: Untagged
@@ -3371,6 +3736,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &614239785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614239783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &634417831
 GameObject:
   m_ObjectHideFlags: 0
@@ -3380,6 +3757,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 634417832}
+  - component: {fileID: 634417833}
+  - component: {fileID: 634417834}
   m_Layer: 0
   m_Name: RedWay6
   m_TagString: Untagged
@@ -3402,6 +3781,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &634417833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634417831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &634417834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634417831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be44e351933d31b4da151f2c8fc4fd46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &642155168
 GameObject:
   m_ObjectHideFlags: 0
@@ -3442,6 +3845,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 656703492}
+  - component: {fileID: 656703493}
   m_Layer: 0
   m_Name: Way1 (33)
   m_TagString: Untagged
@@ -3464,6 +3868,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &656703493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656703491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &662931661
 GameObject:
   m_ObjectHideFlags: 0
@@ -3473,6 +3889,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 662931662}
+  - component: {fileID: 662931663}
+  - component: {fileID: 662931664}
   m_Layer: 0
   m_Name: YellowWay6
   m_TagString: Untagged
@@ -3495,6 +3913,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &662931663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662931661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &662931664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662931661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be44e351933d31b4da151f2c8fc4fd46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &664937757
 GameObject:
   m_ObjectHideFlags: 0
@@ -4126,6 +4568,7 @@ GameObject:
   m_Component:
   - component: {fileID: 695808588}
   - component: {fileID: 695808589}
+  - component: {fileID: 695808590}
   m_Layer: 0
   m_Name: LightBlueStart
   m_TagString: Untagged
@@ -4158,6 +4601,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01b33051e6f0fe94f87aab9a8ed4a35c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &695808590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695808587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &700035356
@@ -4612,6 +5067,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 712302452}
+  - component: {fileID: 712302453}
   m_Layer: 0
   m_Name: Way1 (7)
   m_TagString: Untagged
@@ -4634,6 +5090,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &712302453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712302451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &712833273
 GameObject:
   m_ObjectHideFlags: 0
@@ -4644,6 +5112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 712833274}
   - component: {fileID: 712833275}
+  - component: {fileID: 712833276}
   m_Layer: 0
   m_Name: RedStar
   m_TagString: Untagged
@@ -4676,6 +5145,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01b33051e6f0fe94f87aab9a8ed4a35c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &712833276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712833273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &727587261
@@ -4802,6 +5283,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 773504420}
+  - component: {fileID: 773504421}
   m_Layer: 0
   m_Name: Way1 (50)
   m_TagString: Untagged
@@ -4824,6 +5306,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &773504421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773504419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &782639028
 GameObject:
   m_ObjectHideFlags: 0
@@ -4930,6 +5424,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 889077372}
+  - component: {fileID: 889077373}
   m_Layer: 0
   m_Name: Way1 (11)
   m_TagString: Untagged
@@ -4952,6 +5447,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &889077373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889077371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &903581605
 GameObject:
   m_ObjectHideFlags: 0
@@ -5111,6 +5618,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 906831463}
+  - component: {fileID: 906831464}
   m_Layer: 0
   m_Name: LightBlueWay3
   m_TagString: Untagged
@@ -5133,6 +5641,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &906831464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906831462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &931864947
 GameObject:
   m_ObjectHideFlags: 0
@@ -5142,6 +5662,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 931864948}
+  - component: {fileID: 931864949}
   m_Layer: 0
   m_Name: Way1 (45)
   m_TagString: Untagged
@@ -5164,6 +5685,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &931864949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931864947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &938553521
 GameObject:
   m_ObjectHideFlags: 0
@@ -5173,6 +5706,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 938553522}
+  - component: {fileID: 938553523}
   m_Layer: 0
   m_Name: RedWay3
   m_TagString: Untagged
@@ -5195,6 +5729,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &938553523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938553521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &965838193
 GameObject:
   m_ObjectHideFlags: 0
@@ -5301,6 +5847,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 989115043}
+  - component: {fileID: 989115044}
   m_Layer: 0
   m_Name: LightBlueWay
   m_TagString: Untagged
@@ -5323,6 +5870,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &989115044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989115042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &989680360
 GameObject:
   m_ObjectHideFlags: 0
@@ -5332,6 +5891,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 989680361}
+  - component: {fileID: 989680362}
   m_Layer: 0
   m_Name: Way1 (49)
   m_TagString: Untagged
@@ -5354,6 +5914,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &989680362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989680360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1004875075
 GameObject:
   m_ObjectHideFlags: 0
@@ -5460,6 +6032,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1006026356}
+  - component: {fileID: 1006026357}
   m_Layer: 0
   m_Name: Way1 (34)
   m_TagString: Untagged
@@ -5482,6 +6055,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1006026357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1006026355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1008353093
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5784,6 +6369,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1037061343}
+  - component: {fileID: 1037061344}
   m_Layer: 0
   m_Name: Way1 (15)
   m_TagString: Untagged
@@ -5806,6 +6392,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1037061344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037061342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1039645976
 GameObject:
   m_ObjectHideFlags: 0
@@ -6139,6 +6737,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1057042135}
+  - component: {fileID: 1057042136}
   m_Layer: 0
   m_Name: Way1 (51)
   m_TagString: Untagged
@@ -6161,6 +6760,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1057042136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057042134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1077087968
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6463,6 +7074,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1085134902}
+  - component: {fileID: 1085134903}
   m_Layer: 0
   m_Name: YellowWay2
   m_TagString: Untagged
@@ -6485,6 +7097,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1085134903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085134901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1113860003
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6818,6 +7442,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1155866813}
+  - component: {fileID: 1155866814}
   m_Layer: 0
   m_Name: GreenWay5
   m_TagString: Untagged
@@ -6840,6 +7465,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1155866814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1155866812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1171363839
 GameObject:
   m_ObjectHideFlags: 0
@@ -6911,6 +7548,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1197531406}
+  - component: {fileID: 1197531407}
   m_Layer: 0
   m_Name: Way1 (6)
   m_TagString: Untagged
@@ -6933,6 +7571,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1197531407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197531405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1213178233
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7266,6 +7916,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1262438778}
+  - component: {fileID: 1262438779}
   m_Layer: 0
   m_Name: Way1 (5)
   m_TagString: Untagged
@@ -7288,6 +7939,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1262438779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262438777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1318147869
 GameObject:
   m_ObjectHideFlags: 0
@@ -7297,6 +7960,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1318147870}
+  - component: {fileID: 1318147871}
   m_Layer: 0
   m_Name: Way1 (38)
   m_TagString: Untagged
@@ -7319,6 +7983,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1318147871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318147869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1325506056
 GameObject:
   m_ObjectHideFlags: 0
@@ -7363,6 +8039,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1328713073}
+  - component: {fileID: 1328713074}
   m_Layer: 0
   m_Name: LightBlueWay5
   m_TagString: Untagged
@@ -7385,6 +8062,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1328713074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328713072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1333703043
 GameObject:
   m_ObjectHideFlags: 0
@@ -7394,6 +8083,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1333703044}
+  - component: {fileID: 1333703045}
   m_Layer: 0
   m_Name: Way1 (28)
   m_TagString: Untagged
@@ -7416,6 +8106,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1333703045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333703043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1347408909
 GameObject:
   m_ObjectHideFlags: 0
@@ -7425,6 +8127,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1347408910}
+  - component: {fileID: 1347408911}
   m_Layer: 0
   m_Name: Way1 (10)
   m_TagString: Untagged
@@ -7447,6 +8150,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1347408911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347408909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1371315308
 GameObject:
   m_ObjectHideFlags: 0
@@ -7456,6 +8171,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1371315309}
+  - component: {fileID: 1371315310}
   m_Layer: 0
   m_Name: Way1 (32)
   m_TagString: Untagged
@@ -7478,6 +8194,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1371315310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371315308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1372171054
 GameObject:
   m_ObjectHideFlags: 0
@@ -7685,6 +8413,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1433124441}
+  - component: {fileID: 1433124442}
   m_Layer: 0
   m_Name: RedWay5
   m_TagString: Untagged
@@ -7707,6 +8436,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1433124442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433124440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1445535590
 GameObject:
   m_ObjectHideFlags: 0
@@ -8124,6 +8865,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1525421906}
+  - component: {fileID: 1525421907}
   m_Layer: 0
   m_Name: Way1 (19)
   m_TagString: Untagged
@@ -8146,6 +8888,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1525421907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525421905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1539588614
 GameObject:
   m_ObjectHideFlags: 0
@@ -8155,6 +8909,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1539588615}
+  - component: {fileID: 1539588616}
   m_Layer: 0
   m_Name: Way1 (26)
   m_TagString: Untagged
@@ -8177,6 +8932,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1539588616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539588614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1596358964
 GameObject:
   m_ObjectHideFlags: 0
@@ -8377,6 +9144,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1635187442}
+  - component: {fileID: 1635187443}
   m_Layer: 0
   m_Name: LightBlueWay2
   m_TagString: Untagged
@@ -8399,6 +9167,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1635187443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635187441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1650950824
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8701,6 +9481,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1662509337}
+  - component: {fileID: 1662509338}
   m_Layer: 0
   m_Name: Way1 (23)
   m_TagString: Untagged
@@ -8723,6 +9504,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1662509338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662509336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1673414283
 GameObject:
   m_ObjectHideFlags: 0
@@ -8732,6 +9525,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1673414284}
+  - component: {fileID: 1673414285}
   m_Layer: 0
   m_Name: GreenWay3
   m_TagString: Untagged
@@ -8754,6 +9548,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1673414285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673414283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1675918094
 GameObject:
   m_ObjectHideFlags: 0
@@ -8763,6 +9569,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1675918095}
+  - component: {fileID: 1675918096}
   m_Layer: 0
   m_Name: Way1 (42)
   m_TagString: Untagged
@@ -8785,6 +9592,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1675918096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675918094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1676152333
 GameObject:
   m_ObjectHideFlags: 0
@@ -8878,6 +9697,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1693189742}
+  - component: {fileID: 1693189743}
   m_Layer: 0
   m_Name: YellowWay4
   m_TagString: Untagged
@@ -8900,6 +9720,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1693189743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693189741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1716305419
 GameObject:
   m_ObjectHideFlags: 0
@@ -8909,6 +9741,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1716305420}
+  - component: {fileID: 1716305421}
   m_Layer: 0
   m_Name: LightBlueWay4
   m_TagString: Untagged
@@ -8931,6 +9764,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1716305421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716305419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1716624285
 GameObject:
   m_ObjectHideFlags: 0
@@ -8940,6 +9785,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1716624286}
+  - component: {fileID: 1716624287}
   m_Layer: 0
   m_Name: Way1 (21)
   m_TagString: Untagged
@@ -8962,6 +9808,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1716624287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716624285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1718140714
 GameObject:
   m_ObjectHideFlags: 0
@@ -9072,6 +9930,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1723024513}
+  - component: {fileID: 1723024514}
   m_Layer: 0
   m_Name: Way1 (25)
   m_TagString: Untagged
@@ -9094,6 +9953,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1723024514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723024512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1739670911
 GameObject:
   m_ObjectHideFlags: 0
@@ -9103,6 +9974,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1739670912}
+  - component: {fileID: 1739670913}
   m_Layer: 0
   m_Name: Way1 (46)
   m_TagString: Untagged
@@ -9125,6 +9997,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1739670913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739670911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1753679405
 GameObject:
   m_ObjectHideFlags: 0
@@ -9134,6 +10018,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1753679406}
+  - component: {fileID: 1753679407}
   m_Layer: 0
   m_Name: Way1 (13)
   m_TagString: Untagged
@@ -9156,6 +10041,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1753679407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753679405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1828651393
 GameObject:
   m_ObjectHideFlags: 0
@@ -9165,6 +10062,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1828651394}
+  - component: {fileID: 1828651395}
   m_Layer: 0
   m_Name: GreenWay2
   m_TagString: Untagged
@@ -9187,6 +10085,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1828651395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828651393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1854783180
 GameObject:
   m_ObjectHideFlags: 0
@@ -9264,6 +10174,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1856501340}
+  - component: {fileID: 1856501341}
   m_Layer: 0
   m_Name: Way1 (3)
   m_TagString: Untagged
@@ -9286,6 +10197,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1856501341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856501339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1886758794
 GameObject:
   m_ObjectHideFlags: 0
@@ -9295,6 +10218,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1886758795}
+  - component: {fileID: 1886758797}
   m_Layer: 0
   m_Name: Way1
   m_TagString: Untagged
@@ -9317,6 +10241,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1886758797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1886758794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1944792368
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9912,6 +10848,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2008580959}
+  - component: {fileID: 2008580960}
   m_Layer: 0
   m_Name: Way1 (31)
   m_TagString: Untagged
@@ -9934,6 +10871,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2008580960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008580958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2015472031
 GameObject:
   m_ObjectHideFlags: 0
@@ -9943,6 +10892,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2015472032}
+  - component: {fileID: 2015472033}
   m_Layer: 0
   m_Name: Way1 (17)
   m_TagString: Untagged
@@ -9965,6 +10915,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2015472033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015472031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2021539983
 GameObject:
   m_ObjectHideFlags: 0
@@ -10065,6 +11027,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2026270791}
+  - component: {fileID: 2026270792}
   m_Layer: 0
   m_Name: Way1 (1)
   m_TagString: Untagged
@@ -10087,6 +11050,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2026270792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026270790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2041822972
 GameObject:
   m_ObjectHideFlags: 0
@@ -10096,6 +11071,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2041822973}
+  - component: {fileID: 2041822974}
   m_Layer: 0
   m_Name: Way1 (30)
   m_TagString: Untagged
@@ -10118,6 +11094,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2041822974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041822972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2048138577
 GameObject:
   m_ObjectHideFlags: 0
@@ -10127,6 +11115,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2048138578}
+  - component: {fileID: 2048138579}
   m_Layer: 0
   m_Name: Way1 (29)
   m_TagString: Untagged
@@ -10149,6 +11138,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2048138579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048138577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2055060555
 GameObject:
   m_ObjectHideFlags: 0
@@ -10158,6 +11159,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2055060556}
+  - component: {fileID: 2055060557}
   m_Layer: 0
   m_Name: Way1 (44)
   m_TagString: Untagged
@@ -10180,6 +11182,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2055060557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2055060555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2059457594
 GameObject:
   m_ObjectHideFlags: 0
@@ -10239,6 +11253,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2077483619}
+  - component: {fileID: 2077483620}
   m_Layer: 0
   m_Name: YellowWay3
   m_TagString: Untagged
@@ -10261,6 +11276,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1604266101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2077483620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2077483618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2115282353
 GameObject:
   m_ObjectHideFlags: 0
@@ -10306,6 +11333,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2140878627}
   - component: {fileID: 2140878628}
+  - component: {fileID: 2140878629}
   m_Layer: 0
   m_Name: LightBlueStar
   m_TagString: Untagged
@@ -10338,6 +11366,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01b33051e6f0fe94f87aab9a8ed4a35c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2140878629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140878626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904cb9b186f0acd4eb6991ff4587d79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807

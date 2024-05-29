@@ -13,7 +13,6 @@ public class TokenScript : MonoBehaviour
     
     private int index;
     private bool isOutHouse;
-    private bool isInSecureZone;
 
     private enum MoveState
     {
@@ -28,7 +27,6 @@ public class TokenScript : MonoBehaviour
         GameManager.instance.OnGameStateChanged += GameManager_OnGameStateChanged;
         currentState = MoveState.cannotMove;
         transform.position = ways[0].transform.position;
-        isInSecureZone = true;
     }
 
     private void Update()
@@ -86,29 +84,26 @@ public class TokenScript : MonoBehaviour
 
         GameManager.instance.MovingPiece(); // Put the state on Moving Piece
 
+        if (ways[index].gameObject.TryGetComponent(out WayScript way))
+        {
+            way.RemoveOcuppyPosition(this);
+        }
+
         for (int i = 0; i < GameManager.instance.GetDiceNumberRolled(); i++)
         {
             index++;
             transform.DOLocalJump(ways[index].transform.position, jumpPower, numJumps, duration);
             yield return new WaitForSeconds(duration);
         }
-        
-        if (ways[index].gameObject.TryGetComponent(out SecureZone secureZone))
+
+        if (ways[index].gameObject.TryGetComponent(out WayScript newWay))
         {
-            isInSecureZone = true;
+            newWay.OccupyPosition(this);
         }
-        else
-        {
-            isInSecureZone = false;
-        }
-
-
-
-        GameManager.instance.EndTurn();
 
     }
 
-    public void EatToken()
+    public void TokenCaptured()
     {
         StartCoroutine(BackToHouse());
     }
@@ -117,6 +112,10 @@ public class TokenScript : MonoBehaviour
     {
         float duration = .1f;
         GameManager.instance.MovingPiece(); // Put the state on Moving Piece
+        if (ways[index].gameObject.TryGetComponent(out WayScript way))
+        {
+            way.RemoveOcuppyPosition(this);
+        }
 
         for (int i = index; i >= 0; i--)
         {
@@ -125,9 +124,9 @@ public class TokenScript : MonoBehaviour
             yield return new WaitForSeconds(duration);
         }
 
-        isInSecureZone = true;
         isOutHouse = false;
         index = 0;
+        GameManager.instance.SamePlayerAgain();
     }
 
     private void MoveOutOfHouse()
@@ -143,6 +142,11 @@ public class TokenScript : MonoBehaviour
             {
                 GameManager.instance.EndTurn();
             });
+
+        if (ways[index].gameObject.TryGetComponent(out WayScript newWay))
+        {
+            newWay.OccupyPosition(this);
+        }
     }
         
     public bool canMoveToken()
@@ -154,11 +158,5 @@ public class TokenScript : MonoBehaviour
     {
         return playerSO.ColorPlayer;
     }
-
-    public bool IsInSecureZone()
-    {
-        return isInSecureZone;
-    }
-
 
 }

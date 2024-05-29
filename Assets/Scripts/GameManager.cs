@@ -121,6 +121,13 @@ public class GameManager : MonoBehaviour
         StartTurn();
     }
 
+    public void SamePlayerAgain()
+    {
+        sixRolledQuantity = 0;
+        currentState = GameState.RollDiceState;
+        StartTurn();
+    }
+
     public string GetCurrentPlayer()
     {
         switch(currentPlayer)
