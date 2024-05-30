@@ -23,11 +23,17 @@ public class TokenVisual : MonoBehaviour
     {
         if (GameManager.instance.GetCurrentPlayer() == tokenScript.GetColorPlayer()) 
         {
-            spriteRenderer.sortingOrder = 1;
+            spriteRenderer.sortingOrder = 20;
         } else
         {
             spriteRenderer.sortingOrder = 0;
 
         }
+    }
+
+    private void Update()
+    {
+        spriteRenderer.sortingOrder = Mathf.RoundToInt(tokenScript.gameObject.transform.position.y * -1);
+
     }
 }

@@ -14,6 +14,8 @@ public class TokenScript : MonoBehaviour
     private int index;
     private bool isOutHouse;
 
+    private float zOffset = .1f;
+
     private enum MoveState
     {
         canMove,
@@ -31,10 +33,9 @@ public class TokenScript : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.K))
-        {
-            StartCoroutine(BackToHouse());
-        }
+
+       
+
     }
 
     private void GameManager_OnGameStateChanged(object sender, System.EventArgs e)
@@ -141,12 +142,12 @@ public class TokenScript : MonoBehaviour
             .OnComplete(() =>
             {
                 GameManager.instance.EndTurn();
+                if (ways[index].gameObject.TryGetComponent(out WayScript way))
+                {
+                    way.OccupyPosition(this);
+                }
             });
 
-        if (ways[index].gameObject.TryGetComponent(out WayScript newWay))
-        {
-            newWay.OccupyPosition(this);
-        }
     }
         
     public bool canMoveToken()

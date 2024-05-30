@@ -6,12 +6,18 @@ using UnityEngine;
 public class WayScript : MonoBehaviour
 {
 
-    private bool isOccupied;
     private List<TokenScript> tokenInPlaceList;
 
     private bool isSecureZone;
     private bool isGoalZone;
 
+    private enum AlignType
+    {
+        Horizontal,
+        Vertical
+    }
+
+    [SerializeField] private AlignType alignType;
 
     private void Start()
     {
@@ -25,6 +31,9 @@ public class WayScript : MonoBehaviour
         if(isGoalZone)
         {
             GameManager.instance.SamePlayerAgain();
+            tokenInPlaceList.Add(token);
+            DistributeTokens();
+            return;
         }
 
         if(!isSecureZone)
@@ -39,6 +48,7 @@ public class WayScript : MonoBehaviour
                 } else
                 {
                     tokenInPlaceList.Add(token);
+                    DistributeTokens();
                 }
             } else
             {
@@ -48,6 +58,7 @@ public class WayScript : MonoBehaviour
         } else
         {
             tokenInPlaceList.Add(token);
+            DistributeTokens();
         }
 
         GameManager.instance.EndTurn();
@@ -57,7 +68,31 @@ public class WayScript : MonoBehaviour
     public void RemoveOcuppyPosition(TokenScript token)
     {
         tokenInPlaceList.Remove(token);
+        DistributeTokens();
     }
+
+    public void DistributeTokens()
+    {
+        int count = tokenInPlaceList.Count;
+        float offset = .06f;
+
+        if (count == 0) return;
+
+        float totalWidth = (count - 1) * offset;
+        float start = -totalWidth / 2f;
+
+        for (int i = 0; i < count; i++)
+        {
+            tokenInPlaceList[i].transform.position = this.transform.position;
+            Vector3 newPos;
+
+            if (alignType == AlignType.Horizontal) newPos = new Vector3(start + i * offset, 0, 0);
+            else newPos = new Vector3(0, start + i * offset, 0);
+
+            tokenInPlaceList[i].transform.position += newPos;
+        }
+    }
+
 
     public bool GetIfSecureZone()
     {
