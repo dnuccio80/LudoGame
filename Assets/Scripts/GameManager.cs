@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private PlayerSO[] players;
 
     public event EventHandler OnGameStateChanged;
+    public event EventHandler OnMoveAutomatically;
 
     public enum GameState
     {
@@ -29,12 +30,13 @@ public class GameManager : MonoBehaviour
     private int numPlayers = 4;
     private int diceNumberRolled = 0;
     private int sixRolledQuantity;
+    private int tokensCanMove;
     private string currentPlayerColor;
     private bool playerCanPlay;
 
     // Move Piece State stats
     float movePieceTimer;
-    float movePieceTimerMax = .5f;
+    float movePieceTimerMax = .25f;
 
     private void Awake()
     {
@@ -53,11 +55,8 @@ public class GameManager : MonoBehaviour
         {
             case GameState.RollDiceState:
                 movePieceTimer = movePieceTimerMax;
+                tokensCanMove = 0;
                 playerCanPlay = false;
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    RollDice();
-                }
                 break;
 
             case GameState.MovePieceState:
@@ -69,6 +68,20 @@ public class GameManager : MonoBehaviour
                         EndTurn();
                         break;
                     }
+                } else
+                {
+                    if (tokensCanMove > 1) return;
+
+                    movePieceTimer -= Time.deltaTime;
+                    if (movePieceTimer < 0)
+                    {
+                        if (tokensCanMove == 1)
+                        {
+                            OnMoveAutomatically?.Invoke(this, EventArgs.Empty);
+                        }
+                    }
+
+                    
                 }
                 break;
 
@@ -169,6 +182,7 @@ public class GameManager : MonoBehaviour
     public void PlayerCanPlay()
     {
         playerCanPlay = true;
+        tokensCanMove++;
     }
 
 

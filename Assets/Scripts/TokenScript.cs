@@ -14,8 +14,6 @@ public class TokenScript : MonoBehaviour
     private int index;
     private bool isOutHouse;
 
-    private float zOffset = .1f;
-
     private enum MoveState
     {
         canMove,
@@ -27,15 +25,14 @@ public class TokenScript : MonoBehaviour
     private void Start()
     {
         GameManager.instance.OnGameStateChanged += GameManager_OnGameStateChanged;
+        GameManager.instance.OnMoveAutomatically += GameManager_OnMoveAutomatically;
         currentState = MoveState.cannotMove;
         transform.position = ways[0].transform.position;
     }
 
-    private void Update()
+    private void GameManager_OnMoveAutomatically(object sender, EventArgs e)
     {
-
-       
-
+        if (GameManager.instance.GetCurrentPlayer() == playerSO.ColorPlayer) TryMovePiece();
     }
 
     private void GameManager_OnGameStateChanged(object sender, System.EventArgs e)
@@ -64,7 +61,7 @@ public class TokenScript : MonoBehaviour
         }
     }
 
-    public void TeyMovePiece()
+    public void TryMovePiece()
     {
         if (currentState == MoveState.cannotMove) return;
 
