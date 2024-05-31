@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8424370}
   - component: {fileID: 8424371}
+  - component: {fileID: 8424372}
   m_Layer: 0
   m_Name: YellowWay
   m_TagString: Untagged
@@ -168,6 +169,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alignType: 1
+--- !u!114 &8424372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8424369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09cfe02295f54cf4fb3e2d766feb643d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &11081287
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,6 +249,7 @@ GameObject:
   m_Component:
   - component: {fileID: 24263779}
   - component: {fileID: 24263780}
+  - component: {fileID: 24263781}
   m_Layer: 0
   m_Name: GreenWay
   m_TagString: Untagged
@@ -271,6 +285,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alignType: 0
+--- !u!114 &24263781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24263778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09cfe02295f54cf4fb3e2d766feb643d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &41937979 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8967206648194285177, guid: 49a6daeb82d530443b1382c5db35b34d, type: 3}
+  m_PrefabInstance: {fileID: 667140618}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b26490d6b5724b4b88b5b23fc856273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &52191322
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,6 +353,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alignType: 0
+--- !u!114 &71203590 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2294895004645317385, guid: 22a682b84326b9c47ac281725ba3ac71, type: 3}
+  m_PrefabInstance: {fileID: 374221631}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b26490d6b5724b4b88b5b23fc856273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &98649592
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,6 +432,7 @@ GameObject:
   m_Component:
   - component: {fileID: 100099926}
   - component: {fileID: 100099927}
+  - component: {fileID: 100099928}
   m_Layer: 0
   m_Name: GreenWay4
   m_TagString: Untagged
@@ -419,6 +468,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alignType: 0
+--- !u!114 &100099928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100099925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09cfe02295f54cf4fb3e2d766feb643d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &112142781
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,6 +525,108 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alignType: 0
+--- !u!1 &116269705
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 116269707}
+  - component: {fileID: 116269706}
+  m_Layer: 0
+  m_Name: GreenCpuBrain
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &116269706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116269705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d3a024c3035aef40986f1626d82d050, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSO: {fileID: 11400000, guid: 627eb1d5985c2534ca01daa0f53b507b, type: 2}
+  tokenScriptArray:
+  - {fileID: 991927947}
+  - {fileID: 41937979}
+  - {fileID: 143996961}
+  - {fileID: 1673060876}
+  dice: {fileID: 903581609}
+--- !u!4 &116269707
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116269705}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.042036593, y: -0.7577745, z: 0.20711017}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &116673374
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 116673376}
+  - component: {fileID: 116673375}
+  m_Layer: 0
+  m_Name: YellowCpuBrain
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &116673375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116673374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d3a024c3035aef40986f1626d82d050, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSO: {fileID: 11400000, guid: c2a9f9b9a0bc5ff4db76bcb6b0ba2fed, type: 2}
+  tokenScriptArray:
+  - {fileID: 1270815559}
+  - {fileID: 731927465}
+  - {fileID: 71203590}
+  - {fileID: 1710945792}
+  dice: {fileID: 709916866}
+--- !u!4 &116673376
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116673374}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.042036593, y: -0.7577745, z: 0.20711017}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &129795559
 GameObject:
   m_ObjectHideFlags: 0
@@ -616,6 +779,7 @@ GameObject:
   m_Component:
   - component: {fileID: 139533091}
   - component: {fileID: 139533092}
+  - component: {fileID: 139533093}
   m_Layer: 0
   m_Name: RedWay4
   m_TagString: Untagged
@@ -651,6 +815,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alignType: 1
+--- !u!114 &139533093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139533090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09cfe02295f54cf4fb3e2d766feb643d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &143996961 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8967206648194285177, guid: 49a6daeb82d530443b1382c5db35b34d, type: 3}
+  m_PrefabInstance: {fileID: 1077087968}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b26490d6b5724b4b88b5b23fc856273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &170328946
 GameObject:
   m_ObjectHideFlags: 0
@@ -664,7 +851,7 @@ GameObject:
   - component: {fileID: 170328949}
   - component: {fileID: 170328950}
   m_Layer: 0
-  m_Name: Dice
+  m_Name: RedDice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -814,7 +1001,7 @@ GameObject:
   - component: {fileID: 170958228}
   - component: {fileID: 170958229}
   m_Layer: 0
-  m_Name: Dice
+  m_Name: LightBlueDice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1865,6 +2052,7 @@ GameObject:
   m_Component:
   - component: {fileID: 286407075}
   - component: {fileID: 286407076}
+  - component: {fileID: 286407077}
   m_Layer: 0
   m_Name: RedWay2
   m_TagString: Untagged
@@ -1900,6 +2088,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alignType: 1
+--- !u!114 &286407077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286407074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09cfe02295f54cf4fb3e2d766feb643d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &296857577
 GameObject:
   m_ObjectHideFlags: 0
@@ -2895,6 +3095,7 @@ GameObject:
   m_Component:
   - component: {fileID: 428068007}
   - component: {fileID: 428068008}
+  - component: {fileID: 428068009}
   m_Layer: 0
   m_Name: RedWay
   m_TagString: Untagged
@@ -2930,6 +3131,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alignType: 1
+--- !u!114 &428068009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428068006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09cfe02295f54cf4fb3e2d766feb643d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &436348070
 GameObject:
   m_ObjectHideFlags: 0
@@ -3668,6 +3881,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 412176667}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &563181419 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1286307824670841268, guid: dec855dbc6c181443bea44b09eb1bb1b, type: 3}
+  m_PrefabInstance: {fileID: 282325662}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b26490d6b5724b4b88b5b23fc856273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &590163867
 GameObject:
   m_ObjectHideFlags: 0
@@ -3740,6 +3964,7 @@ GameObject:
   m_Component:
   - component: {fileID: 614239784}
   - component: {fileID: 614239785}
+  - component: {fileID: 614239786}
   m_Layer: 0
   m_Name: YellowWay5
   m_TagString: Untagged
@@ -3775,6 +4000,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alignType: 1
+--- !u!114 &614239786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614239783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09cfe02295f54cf4fb3e2d766feb643d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &634417831
 GameObject:
   m_ObjectHideFlags: 0
@@ -4952,7 +5189,7 @@ GameObject:
   - component: {fileID: 709916865}
   - component: {fileID: 709916866}
   m_Layer: 0
-  m_Name: Dice
+  m_Name: YellowDice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5276,6 +5513,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &731927465 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2294895004645317385, guid: 22a682b84326b9c47ac281725ba3ac71, type: 3}
+  m_PrefabInstance: {fileID: 386551151}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b26490d6b5724b4b88b5b23fc856273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &743883554
 GameObject:
   m_ObjectHideFlags: 0
@@ -5507,7 +5755,7 @@ GameObject:
   - component: {fileID: 903581608}
   - component: {fileID: 903581609}
   m_Layer: 0
-  m_Name: Dice
+  m_Name: GreenDice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5654,6 +5902,7 @@ GameObject:
   m_Component:
   - component: {fileID: 906831463}
   - component: {fileID: 906831464}
+  - component: {fileID: 906831465}
   m_Layer: 0
   m_Name: LightBlueWay3
   m_TagString: Untagged
@@ -5689,6 +5938,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alignType: 0
+--- !u!114 &906831465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906831462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09cfe02295f54cf4fb3e2d766feb643d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &908427539 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1286307824670841268, guid: dec855dbc6c181443bea44b09eb1bb1b, type: 3}
+  m_PrefabInstance: {fileID: 1213178233}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b26490d6b5724b4b88b5b23fc856273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &931864947
 GameObject:
   m_ObjectHideFlags: 0
@@ -5744,6 +6016,7 @@ GameObject:
   m_Component:
   - component: {fileID: 938553522}
   - component: {fileID: 938553523}
+  - component: {fileID: 938553524}
   m_Layer: 0
   m_Name: RedWay3
   m_TagString: Untagged
@@ -5779,6 +6052,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alignType: 1
+--- !u!114 &938553524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938553521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09cfe02295f54cf4fb3e2d766feb643d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &965838193
 GameObject:
   m_ObjectHideFlags: 0
@@ -5886,6 +6171,7 @@ GameObject:
   m_Component:
   - component: {fileID: 989115043}
   - component: {fileID: 989115044}
+  - component: {fileID: 989115045}
   m_Layer: 0
   m_Name: LightBlueWay
   m_TagString: Untagged
@@ -5921,6 +6207,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alignType: 0
+--- !u!114 &989115045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989115042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09cfe02295f54cf4fb3e2d766feb643d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &989680360
 GameObject:
   m_ObjectHideFlags: 0
@@ -5966,6 +6264,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alignType: 0
+--- !u!114 &991927947 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8967206648194285177, guid: 49a6daeb82d530443b1382c5db35b34d, type: 3}
+  m_PrefabInstance: {fileID: 678184347}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b26490d6b5724b4b88b5b23fc856273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1004875075
 GameObject:
   m_ObjectHideFlags: 0
@@ -7122,6 +7431,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1085134902}
   - component: {fileID: 1085134903}
+  - component: {fileID: 1085134904}
   m_Layer: 0
   m_Name: YellowWay2
   m_TagString: Untagged
@@ -7157,6 +7467,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alignType: 1
+--- !u!114 &1085134904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085134901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09cfe02295f54cf4fb3e2d766feb643d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1113860003
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7491,6 +7813,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1155866813}
   - component: {fileID: 1155866814}
+  - component: {fileID: 1155866815}
   m_Layer: 0
   m_Name: GreenWay5
   m_TagString: Untagged
@@ -7526,6 +7849,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alignType: 0
+--- !u!114 &1155866815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1155866812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09cfe02295f54cf4fb3e2d766feb643d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1171363839
 GameObject:
   m_ObjectHideFlags: 0
@@ -8002,6 +8337,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alignType: 1
+--- !u!114 &1270815559 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2294895004645317385, guid: 22a682b84326b9c47ac281725ba3ac71, type: 3}
+  m_PrefabInstance: {fileID: 1041573490}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b26490d6b5724b4b88b5b23fc856273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1318147869
 GameObject:
   m_ObjectHideFlags: 0
@@ -8092,6 +8438,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1328713073}
   - component: {fileID: 1328713074}
+  - component: {fileID: 1328713075}
   m_Layer: 0
   m_Name: LightBlueWay5
   m_TagString: Untagged
@@ -8127,6 +8474,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alignType: 0
+--- !u!114 &1328713075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328713072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09cfe02295f54cf4fb3e2d766feb643d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1333703043
 GameObject:
   m_ObjectHideFlags: 0
@@ -8429,6 +8788,17 @@ Transform:
   - {fileID: 1004875076}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1414598140 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1286307824670841268, guid: dec855dbc6c181443bea44b09eb1bb1b, type: 3}
+  m_PrefabInstance: {fileID: 1008353093}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b26490d6b5724b4b88b5b23fc856273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1424350210
 GameObject:
   m_ObjectHideFlags: 0
@@ -8470,6 +8840,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1433124441}
   - component: {fileID: 1433124442}
+  - component: {fileID: 1433124443}
   m_Layer: 0
   m_Name: RedWay5
   m_TagString: Untagged
@@ -8505,6 +8876,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alignType: 1
+--- !u!114 &1433124443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433124440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09cfe02295f54cf4fb3e2d766feb643d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1445535590
 GameObject:
   m_ObjectHideFlags: 0
@@ -9204,6 +9587,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1635187442}
   - component: {fileID: 1635187443}
+  - component: {fileID: 1635187444}
   m_Layer: 0
   m_Name: LightBlueWay2
   m_TagString: Untagged
@@ -9239,6 +9623,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alignType: 0
+--- !u!114 &1635187444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635187441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09cfe02295f54cf4fb3e2d766feb643d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1650950824
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9577,6 +9973,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alignType: 0
+--- !u!114 &1673060876 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8967206648194285177, guid: 49a6daeb82d530443b1382c5db35b34d, type: 3}
+  m_PrefabInstance: {fileID: 1944792368}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b26490d6b5724b4b88b5b23fc856273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1673414283
 GameObject:
   m_ObjectHideFlags: 0
@@ -9587,6 +9994,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1673414284}
   - component: {fileID: 1673414285}
+  - component: {fileID: 1673414286}
   m_Layer: 0
   m_Name: GreenWay3
   m_TagString: Untagged
@@ -9622,6 +10030,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alignType: 0
+--- !u!114 &1673414286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673414283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09cfe02295f54cf4fb3e2d766feb643d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1675918094
 GameObject:
   m_ObjectHideFlags: 0
@@ -9761,6 +10181,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1693189742}
   - component: {fileID: 1693189743}
+  - component: {fileID: 1693189744}
   m_Layer: 0
   m_Name: YellowWay4
   m_TagString: Untagged
@@ -9796,6 +10217,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alignType: 1
+--- !u!114 &1693189744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693189741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09cfe02295f54cf4fb3e2d766feb643d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1710945792 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2294895004645317385, guid: 22a682b84326b9c47ac281725ba3ac71, type: 3}
+  m_PrefabInstance: {fileID: 1461489403}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b26490d6b5724b4b88b5b23fc856273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1716305419
 GameObject:
   m_ObjectHideFlags: 0
@@ -9806,6 +10250,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1716305420}
   - component: {fileID: 1716305421}
+  - component: {fileID: 1716305422}
   m_Layer: 0
   m_Name: LightBlueWay4
   m_TagString: Untagged
@@ -9841,6 +10286,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alignType: 0
+--- !u!114 &1716305422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716305419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09cfe02295f54cf4fb3e2d766feb643d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1716624285
 GameObject:
   m_ObjectHideFlags: 0
@@ -10132,6 +10589,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1828651394}
   - component: {fileID: 1828651395}
+  - component: {fileID: 1828651396}
   m_Layer: 0
   m_Name: GreenWay2
   m_TagString: Untagged
@@ -10167,6 +10625,69 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alignType: 0
+--- !u!114 &1828651396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828651393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09cfe02295f54cf4fb3e2d766feb643d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1835229815
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1835229816}
+  - component: {fileID: 1835229817}
+  m_Layer: 0
+  m_Name: RedCpuBrain
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1835229816
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835229815}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.042036593, y: -0.7577745, z: 0.20711017}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1835229817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835229815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d3a024c3035aef40986f1626d82d050, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSO: {fileID: 11400000, guid: 6f123a4fe7a55c340935c47e6417f2c3, type: 2}
+  tokenScriptArray:
+  - {fileID: 1414598140}
+  - {fileID: 563181419}
+  - {fileID: 908427539}
+  - {fileID: 2146040457}
+  dice: {fileID: 170328950}
 --- !u!1 &1854783180
 GameObject:
   m_ObjectHideFlags: 0
@@ -11332,6 +11853,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2077483619}
   - component: {fileID: 2077483620}
+  - component: {fileID: 2077483621}
   m_Layer: 0
   m_Name: YellowWay3
   m_TagString: Untagged
@@ -11367,6 +11889,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alignType: 1
+--- !u!114 &2077483621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2077483618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09cfe02295f54cf4fb3e2d766feb643d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2115282353
 GameObject:
   m_ObjectHideFlags: 0
@@ -11460,6 +11994,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alignType: 1
+--- !u!114 &2146040457 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1286307824670841268, guid: dec855dbc6c181443bea44b09eb1bb1b, type: 3}
+  m_PrefabInstance: {fileID: 1650950824}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b26490d6b5724b4b88b5b23fc856273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -11492,3 +12037,6 @@ SceneRoots:
   - {fileID: 386551151}
   - {fileID: 374221631}
   - {fileID: 1461489403}
+  - {fileID: 1835229816}
+  - {fileID: 116269707}
+  - {fileID: 116673376}

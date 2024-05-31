@@ -185,6 +185,11 @@ public class GameManager : MonoBehaviour
         tokensCanMove++;
     }
 
+    public bool GetCpuCanPlayMoreThanOneMovement()
+    {
+        // this void is for CPU thinking, so we need to get if player can execute more than one token movement.
+        return (playerCanPlay && tokensCanMove > 1);
+    }
 
 
 }

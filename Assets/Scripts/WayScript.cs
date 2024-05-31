@@ -9,6 +9,7 @@ public class WayScript : MonoBehaviour
     private List<TokenScript> tokenInPlaceList;
 
     private bool isSecureZone;
+    private bool isFinalWayZone;
     private bool isGoalZone;
 
     private enum AlignType
@@ -22,6 +23,7 @@ public class WayScript : MonoBehaviour
     private void Start()
     {
         isSecureZone = gameObject.TryGetComponent(out SecureZone secureZone);
+        isFinalWayZone = gameObject.TryGetComponent(out FinalWay finalWayZone);
         isGoalZone = gameObject.TryGetComponent(out Goal goal);
         tokenInPlaceList = new List<TokenScript>();
     }
@@ -94,9 +96,29 @@ public class WayScript : MonoBehaviour
     }
 
 
-    public bool GetIfSecureZone()
+    public bool IsSecureZone()
     {
         return isSecureZone;
+    }
+
+    public bool IsFinalWayZone()
+    {
+        return isFinalWayZone;
+    }
+
+    public bool IsGoalZone()
+    {
+        return isGoalZone;
+    }
+
+    public bool HaveAToken()
+    {
+        return tokenInPlaceList.Count > 0;
+    }
+
+    public string GetTokenColor()
+    {
+        return tokenInPlaceList[0].GetComponent<TokenScript>().GetColorPlayer();
     }
 
 }

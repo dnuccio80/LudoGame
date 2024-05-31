@@ -127,7 +127,7 @@ public class TokenScript : MonoBehaviour
         GameManager.instance.SamePlayerAgain();
     }
 
-    private void MoveOutOfHouse()
+    public void MoveOutOfHouse()
     {
         isOutHouse = true;
         index++;
@@ -146,7 +146,75 @@ public class TokenScript : MonoBehaviour
             });
 
     }
-        
+
+    public bool HaveTokenToEat()
+    {
+        // Check if the way we can move, there is a token To Eat
+        if (!isOutHouse) return false;
+
+        int numberRolled = GameManager.instance.GetDiceNumberRolled();
+
+        int nextWayInt = index + numberRolled;
+
+        WayScript nextWayToOcupy = (ways[nextWayInt].GetComponent<WayScript>());
+
+        if (nextWayToOcupy.HaveAToken() && nextWayToOcupy.GetTokenColor() != playerSO.ColorPlayer && !nextWayToOcupy.IsSecureZone()) return true;
+        else return false;
+
+    }    
+    
+    public bool HaveSecureZoneToMove()
+    {
+        if (!isOutHouse) return false;
+
+        int numberRolled = GameManager.instance.GetDiceNumberRolled();
+
+        int nextWayInt = index + numberRolled;
+
+        WayScript nextWayToOcupy = (ways[nextWayInt].GetComponent<WayScript>());
+
+        if (nextWayToOcupy.IsSecureZone()) return true;
+        else return false;
+    }
+
+    public bool IsInSecureZone()
+    {
+        if (!isOutHouse) return false;
+
+        WayScript currentWay = ways[index].GetComponent<WayScript>();
+
+        if (currentWay.IsSecureZone()) return true;
+        else return false;
+    }
+
+    public bool CanMoveToFinalWay()
+    {
+        if (!isOutHouse) return false;
+
+        int numberRolled = GameManager.instance.GetDiceNumberRolled();
+
+        int nextWayInt = index + numberRolled;
+
+        WayScript nextWayToOcupy = (ways[nextWayInt].GetComponent<WayScript>());
+
+        if (nextWayToOcupy.IsFinalWayZone()) return true;
+        else return false;
+    }
+
+    public bool CanMoveToGoal()
+    {
+        if (!isOutHouse) return false;
+
+        int numberRolled = GameManager.instance.GetDiceNumberRolled();
+
+        int nextWayInt = index + numberRolled;
+
+        WayScript nextWayToOcupy = (ways[nextWayInt].GetComponent<WayScript>());
+
+        if (nextWayToOcupy.IsGoalZone()) return true;
+        else return false;
+    }
+
     public bool canMoveToken()
     {
         return currentState == MoveState.canMove;
@@ -155,6 +223,12 @@ public class TokenScript : MonoBehaviour
     public string GetColorPlayer()
     {
         return playerSO.ColorPlayer;
+    }
+
+    public bool GetIfOutOfHouse()
+    {
+        // This is when cpu roll a 6, the first move cpu will do, is Get a token out of house
+        return isOutHouse;
     }
 
 }
