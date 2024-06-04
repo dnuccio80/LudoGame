@@ -11,7 +11,9 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance {  get; private set; }
 
-    [SerializeField] private PlayerSO[] players;
+    [SerializeField] private List<PlayerSO> players;
+
+    private List<PlayerSO> CpuPlayers = new List<PlayerSO>();
 
     public event EventHandler OnGameStateChanged;
     public event EventHandler OnMoveAutomatically;
@@ -27,7 +29,6 @@ public class GameManager : MonoBehaviour
     public GameState currentState;
 
     private int currentPlayer = 0;
-    private int numPlayers = 4;
     private int diceNumberRolled = 0;
     private int sixRolledQuantity;
     private int tokensCanMove;
@@ -124,9 +125,9 @@ public class GameManager : MonoBehaviour
 
     public void EndTurn()
     {
-        if(diceNumberRolled != 6 || sixRolledQuantity == 3)
+        if(diceNumberRolled != 6 || sixRolledQuantity == 3 || !playerCanPlay)
         {
-            currentPlayer = (currentPlayer + 1) % numPlayers;
+            currentPlayer = (currentPlayer + 1) % players.Count;
             sixRolledQuantity = 0;
         }
 
@@ -158,6 +159,30 @@ public class GameManager : MonoBehaviour
         return currentPlayerColor;
     }
 
+    public void SetCpuPlayer(PlayerSO playerSO)
+    {
+        for(int i = 0; i < players.Count; i++)
+        {
+            if (players[i].ColorPlayer == playerSO.ColorPlayer)
+            {
+                CpuPlayers.Add(players[i]);
+            }
+        }
+    }
+
+    public bool GetCurrentPlayerIsCpu()
+    {
+        foreach(PlayerSO player in CpuPlayers)
+        {
+            if(player.ColorPlayer == GetCurrentPlayer())
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     public void MovingPiece()
     {
         currentState = GameState.MovingPiece;
@@ -183,6 +208,18 @@ public class GameManager : MonoBehaviour
     {
         playerCanPlay = true;
         tokensCanMove++;
+    }
+
+    public void PlayerWin(PlayerSO playerSO)
+    {
+        foreach(PlayerSO player in players)
+        {
+            if(playerSO.ColorPlayer == player.ColorPlayer)
+            {
+                players.Remove(player);
+                break;
+            }
+        }
     }
 
     public bool GetCpuCanPlayMoreThanOneMovement()

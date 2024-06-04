@@ -20,6 +20,7 @@ public class CpuBehaviour : MonoBehaviour
     private void Start()
     {
         GameManager.instance.OnGameStateChanged += GameManager_OnGameStateChanged;
+        SetCpuPlayer();
     }
 
     private void GameManager_OnGameStateChanged(object sender, System.EventArgs e)
@@ -135,11 +136,16 @@ public class CpuBehaviour : MonoBehaviour
         tokensToMoveToGoalList.Clear();
         foreach (TokenScript token in tokensCanMoveList)
         {
-            if (token.CanMoveToFinalWay())
+            if (token.CanMoveToGoal())
             {
                 tokensToMoveToGoalList.Add(token);
             }
         }
+    }
+
+    private void SetCpuPlayer()
+    {
+        GameManager.instance.SetCpuPlayer(playerSO);
     }
 
     private void UpdateAllLists()

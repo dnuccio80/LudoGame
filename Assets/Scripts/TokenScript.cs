@@ -99,6 +99,11 @@ public class TokenScript : MonoBehaviour
             newWay.OccupyPosition(this);
         }
 
+        if (ways[index].gameObject.TryGetComponent(out Goal goal))
+        {
+            goal.TokenOnGoal();
+        }
+
     }
 
     public void TokenCaptured()
