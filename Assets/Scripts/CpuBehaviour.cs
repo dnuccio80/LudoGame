@@ -19,8 +19,9 @@ public class CpuBehaviour : MonoBehaviour
 
     private void Start()
     {
-        GameManager.instance.OnGameStateChanged += GameManager_OnGameStateChanged;
         SetCpuPlayer();
+        UpdateAllLists();
+        GameManager.instance.OnGameStateChanged += GameManager_OnGameStateChanged;
     }
 
     private void GameManager_OnGameStateChanged(object sender, System.EventArgs e)

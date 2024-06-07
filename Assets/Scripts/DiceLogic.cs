@@ -31,6 +31,8 @@ public class DiceLogic : MonoBehaviour
     public void RollDice()
     {
         if (!diceContainer.CanDiceBeRolled()) return;
+        if (!GameManager.instance.GetCanRollDice()) return;
+
         GameManager.instance.RollDice();
         diceContainer.DiceRolled();
     }

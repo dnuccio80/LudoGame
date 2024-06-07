@@ -24,10 +24,13 @@ public class ArrowVisual : MonoBehaviour
 
     private void GameManager_OnGameStateChanged(object sender, EventArgs e)
     {
-        (diceContainer.GetPlayerColor() == GameManager.instance.GetCurrentPlayer() ? (Action) Show : Hide)();
+        if (!GameManager.instance.IsRollDiceState())
+        {
+            Hide();
+            return;
+        }
 
-        if (!GameManager.instance.IsRollDiceState()) Hide();
- 
+        (diceContainer.GetPlayerColor() == GameManager.instance.GetCurrentPlayer() ? (Action) Show : Hide)();
     }
 
     public void MoveArrow()

@@ -32,7 +32,6 @@ public class WayScript : MonoBehaviour
     {
         if(isGoalZone)
         {
-            GameManager.instance.SamePlayerAgain();
             tokenInPlaceList.Add(token);
             DistributeTokens();
             return;

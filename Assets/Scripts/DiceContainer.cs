@@ -30,7 +30,7 @@ public class DiceContainer : MonoBehaviour
     private void GameManager_OnGameStateChanged(object sender, EventArgs e)
     {
         if (GameManager.instance.IsRollDiceState()) ResetDice();
-        if (GameManager.instance.IsMovePieceState()) DiceRolled();
+        else if (GameManager.instance.IsMovePieceState()) DiceRolled();
     }
 
     public string GetPlayerColor()

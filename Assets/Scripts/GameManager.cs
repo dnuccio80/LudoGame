@@ -17,6 +17,13 @@ public class GameManager : MonoBehaviour
 
     public event EventHandler OnGameStateChanged;
     public event EventHandler OnMoveAutomatically;
+    public event EventHandler<OnPlayerWinEventArgs> OnPlayerWin;
+
+    public class OnPlayerWinEventArgs : EventArgs
+    {
+        public PlayerSO playerSO;
+        public int playerWinNumber;
+    }
 
     public enum GameState
     {
@@ -32,12 +39,17 @@ public class GameManager : MonoBehaviour
     private int diceNumberRolled = 0;
     private int sixRolledQuantity;
     private int tokensCanMove;
+    private int playerWinNumber;
     private string currentPlayerColor;
     private bool playerCanPlay;
+    private bool canRollDice;
 
-    // Move Piece State stats
+
+    // Timers
     float movePieceTimer;
     float movePieceTimerMax = .25f;
+    float rollDiceTimer;
+    float rollDiceTimerMax = .3f;
 
     private void Awake()
     {
@@ -46,7 +58,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        currentState = GameState.RollDiceState;
+        rollDiceTimer = rollDiceTimerMax;
         StartTurn();
     }
 
@@ -55,12 +67,23 @@ public class GameManager : MonoBehaviour
         switch (currentState)
         {
             case GameState.RollDiceState:
+
                 movePieceTimer = movePieceTimerMax;
                 tokensCanMove = 0;
                 playerCanPlay = false;
+
+                rollDiceTimer -= Time.deltaTime;
+
+                if(rollDiceTimer <= 0)
+                {
+                    canRollDice = true;
+                }
+
                 break;
 
             case GameState.MovePieceState:
+                rollDiceTimer = rollDiceTimerMax;
+                canRollDice = false;
                 if (!playerCanPlay)
                 {
                     movePieceTimer -= Time.deltaTime;
@@ -85,10 +108,6 @@ public class GameManager : MonoBehaviour
                     
                 }
                 break;
-
-            case GameState.EndTurn:
-                EndTurn();
-                break;
         }
     }
 
@@ -100,10 +119,13 @@ public class GameManager : MonoBehaviour
 
     public void RollDice()
     {
+        if (!canRollDice) return;
+
         int minDieNumber = 1;
         int maxDieNumber = 7;
 
         diceNumberRolled = UnityEngine.Random.Range(minDieNumber, maxDieNumber);
+
         if (diceNumberRolled == 6)
         {
             sixRolledQuantity++;
@@ -112,15 +134,10 @@ public class GameManager : MonoBehaviour
                 EndTurn();
                 return;
             }
-
         }
+
         currentState = GameState.MovePieceState;
         OnGameStateChanged?.Invoke(this, EventArgs.Empty);
-    }
-
-    void MovePiece()
-    {
-        currentState = GameState.EndTurn;
     }
 
     public void EndTurn()
@@ -131,14 +148,12 @@ public class GameManager : MonoBehaviour
             sixRolledQuantity = 0;
         }
 
-        currentState = GameState.RollDiceState;
         StartTurn();
     }
 
     public void SamePlayerAgain()
     {
         sixRolledQuantity = 0;
-        currentState = GameState.RollDiceState;
         StartTurn();
     }
 
@@ -212,6 +227,8 @@ public class GameManager : MonoBehaviour
 
     public void PlayerWin(PlayerSO playerSO)
     {
+        EndTurn();
+        
         foreach(PlayerSO player in players)
         {
             if(playerSO.ColorPlayer == player.ColorPlayer)
@@ -220,12 +237,25 @@ public class GameManager : MonoBehaviour
                 break;
             }
         }
+
+        playerWinNumber++;
+
+        OnPlayerWin?.Invoke(this, new OnPlayerWinEventArgs
+        {
+            playerSO = playerSO,
+            playerWinNumber = playerWinNumber
+        });
     }
 
     public bool GetCpuCanPlayMoreThanOneMovement()
     {
         // this void is for CPU thinking, so we need to get if player can execute more than one token movement.
         return (playerCanPlay && tokensCanMove > 1);
+    }
+
+    public bool GetCanRollDice()
+    {
+        return canRollDice;
     }
 
 

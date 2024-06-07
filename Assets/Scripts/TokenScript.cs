@@ -22,12 +22,16 @@ public class TokenScript : MonoBehaviour
 
     private MoveState currentState;
 
+    private void Awake()
+    {
+        currentState = MoveState.cannotMove;
+        transform.position = ways[0].transform.position;
+    }
+
     private void Start()
     {
         GameManager.instance.OnGameStateChanged += GameManager_OnGameStateChanged;
         GameManager.instance.OnMoveAutomatically += GameManager_OnMoveAutomatically;
-        currentState = MoveState.cannotMove;
-        transform.position = ways[0].transform.position;
     }
 
     private void GameManager_OnMoveAutomatically(object sender, EventArgs e)
