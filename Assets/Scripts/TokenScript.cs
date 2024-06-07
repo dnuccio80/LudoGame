@@ -10,6 +10,7 @@ public class TokenScript : MonoBehaviour
     
     [SerializeField] private Transform[] ways;
     [SerializeField] private PlayerSO playerSO;
+    [SerializeField] private ParticleSystem ripplePS;
     
     private int index;
     private bool isOutHouse;
@@ -94,6 +95,7 @@ public class TokenScript : MonoBehaviour
         for (int i = 0; i < GameManager.instance.GetDiceNumberRolled(); i++)
         {
             index++;
+            ripplePS.Play();
             transform.DOLocalJump(ways[index].transform.position, jumpPower, numJumps, duration);
             yield return new WaitForSeconds(duration);
         }
