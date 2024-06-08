@@ -2617,7 +2617,8 @@ MonoBehaviour:
   rollDiceSound: {fileID: 8300000, guid: 07af3aa1ebd791d4f803fa04a1b5ef95, type: 3}
   secureZoneSound: {fileID: 8300000, guid: fc59f8fda6a6c8542a98257555e0e488, type: 3}
   startTurnSound: {fileID: 8300000, guid: 33929daa27689594a9b0e57d04395fe4, type: 3}
-  winningSound: {fileID: 8300000, guid: 1cbe415e872963d48bc62b6d169d769c, type: 3}
+  winningSound: {fileID: 8300000, guid: 9a45fae87954e314189ca1b4650a565a, type: 3}
+  finishGameSound: {fileID: 8300000, guid: 1cbe415e872963d48bc62b6d169d769c, type: 3}
 --- !u!82 &330644553
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2630,7 +2631,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0

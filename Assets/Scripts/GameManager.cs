@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     public class OnPlayerWinEventArgs : EventArgs
     {
         public PlayerSO playerSO;
-        public int playerWinNumber;
+        public int playerWinPosition;
     }
 
     public enum GameState
@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
     private int diceNumberRolled = 0;
     private int sixRolledQuantity;
     private int tokensCanMove;
-    private int playerWinNumber;
+    private int playerWinPosition;
     private string currentPlayerColor;
     private bool playerCanPlay;
     private bool canRollDice;
@@ -161,23 +161,13 @@ public class GameManager : MonoBehaviour
     public void SamePlayerAgain()
     {
         sixRolledQuantity = 0;
-        SoundManager.Instance.EmitRollDiceSound();
+        SoundManager.Instance.EmitStartTurnSound();
         StartTurn();
     }
 
     public string GetCurrentPlayer()
     {
-        switch(currentPlayer)
-        {
-            case 0:
-                currentPlayerColor = players[0].ColorPlayer; break;
-            case 1:
-                currentPlayerColor = players[1].ColorPlayer; break;
-            case 2:
-                currentPlayerColor = players[2].ColorPlayer; break;
-            case 3: 
-                currentPlayerColor = players[3].ColorPlayer; break;
-        }
+        currentPlayerColor = players[currentPlayer].ColorPlayer;
 
         return currentPlayerColor;
     }
@@ -235,8 +225,6 @@ public class GameManager : MonoBehaviour
 
     public void PlayerWin(PlayerSO playerSO)
     {
-        EndTurn();
-        
         foreach(PlayerSO player in players)
         {
             if(playerSO.ColorPlayer == player.ColorPlayer)
@@ -246,12 +234,14 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        playerWinNumber++;
+        EndTurn();
+
+        playerWinPosition++;
 
         OnPlayerWin?.Invoke(this, new OnPlayerWinEventArgs
         {
             playerSO = playerSO,
-            playerWinNumber = playerWinNumber
+            playerWinPosition = playerWinPosition
         });
     }
 

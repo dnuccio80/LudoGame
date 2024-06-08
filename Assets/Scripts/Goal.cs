@@ -7,7 +7,7 @@ public class Goal : MonoBehaviour
 {
     [SerializeField] private PlayerSO playerSO;
 
-    private int tokensOnGoal;
+    private int tokensOnGoal = 3;
 
     public void TokenOnGoal()
     {

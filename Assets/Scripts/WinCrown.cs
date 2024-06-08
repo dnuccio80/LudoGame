@@ -20,7 +20,7 @@ public class WinCrown : MonoBehaviour
         if(e.playerSO.ColorPlayer == playerSO.ColorPlayer)
         {
             Show();
-            numberWinText.text = e.playerWinNumber.ToString();
+            numberWinText.text = e.playerWinPosition.ToString();
         }
     }
 

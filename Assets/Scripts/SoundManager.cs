@@ -13,6 +13,7 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioClip secureZoneSound;
     [SerializeField] private AudioClip startTurnSound;
     [SerializeField] private AudioClip winningSound;
+    [SerializeField] private AudioClip finishGameSound;
 
     private AudioSource audioSource;
 
@@ -25,6 +26,11 @@ public class SoundManager : MonoBehaviour
     public void EmitBackToHouseSound()
     {
         audioSource.clip = backToHouseSound;
+        audioSource.Play();
+    }
+    public void EmitFinishGameSound()
+    {
+        audioSource.clip = finishGameSound;
         audioSource.Play();
     }
 
@@ -59,8 +65,9 @@ public class SoundManager : MonoBehaviour
 
     public void EmitWinningSound()
     {
-        audioSource.clip = winningSound;
-        audioSource.Play();
+        //audioSource.clip = winningSound;
+        //audioSource.Play();
+        AudioSource.PlayClipAtPoint(winningSound,Vector3.zero);
     }
 
 
