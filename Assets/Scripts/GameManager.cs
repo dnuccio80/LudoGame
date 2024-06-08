@@ -121,6 +121,8 @@ public class GameManager : MonoBehaviour
     {
         if (!canRollDice) return;
 
+        SoundManager.Instance.EmitRollDiceSound();
+
         int minDieNumber = 1;
         int maxDieNumber = 7;
 
@@ -159,6 +161,7 @@ public class GameManager : MonoBehaviour
     public void SamePlayerAgain()
     {
         sixRolledQuantity = 0;
+        SoundManager.Instance.EmitRollDiceSound();
         StartTurn();
     }
 

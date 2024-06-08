@@ -96,6 +96,7 @@ public class TokenScript : MonoBehaviour
         {
             index++;
             ripplePS.Play();
+            SoundManager.Instance.EmitPopSound();
             transform.DOLocalJump(ways[index].transform.position, jumpPower, numJumps, duration);
             yield return new WaitForSeconds(duration);
         }
@@ -110,6 +111,11 @@ public class TokenScript : MonoBehaviour
             goal.TokenOnGoal();
         }
 
+        if(ways[index].gameObject.TryGetComponent(out SecureZone secureZone))
+        {
+            SoundManager.Instance.EmitSecureZoneSound();
+        } 
+
     }
 
     public void TokenCaptured()
@@ -120,6 +126,7 @@ public class TokenScript : MonoBehaviour
     IEnumerator BackToHouse()
     {
         float duration = .1f;
+        SoundManager.Instance.EmitBackToHouseSound();
         GameManager.instance.MovingPiece(); // Put the state on Moving Piece
         if (ways[index].gameObject.TryGetComponent(out WayScript way))
         {

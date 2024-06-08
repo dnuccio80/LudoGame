@@ -7,14 +7,22 @@ public class Goal : MonoBehaviour
 {
     [SerializeField] private PlayerSO playerSO;
 
-    private int tokensOnGoal = 3;
+    private int tokensOnGoal;
 
     public void TokenOnGoal()
     {
         tokensOnGoal++;
 
-        if (tokensOnGoal == 4) GameManager.instance.PlayerWin(playerSO);
-        else GameManager.instance.SamePlayerAgain();
+        if (tokensOnGoal == 4)
+        {
+            GameManager.instance.PlayerWin(playerSO);
+            SoundManager.Instance.EmitWinningSound();
+        }
+        else
+        {
+            GameManager.instance.SamePlayerAgain();
+            SoundManager.Instance.EmitGoalSound();
+        }
     }
 
 
