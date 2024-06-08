@@ -10,6 +10,7 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioClip goalSound;
     [SerializeField] private AudioClip popSound;
     [SerializeField] private AudioClip rollDiceSound;
+    [SerializeField] private AudioClip startGameSound;
     [SerializeField] private AudioClip secureZoneSound;
     [SerializeField] private AudioClip startTurnSound;
     [SerializeField] private AudioClip winningSound;
@@ -23,6 +24,20 @@ public class SoundManager : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
+    private void Start()
+    {
+        GameManager.instance.OnGameStateChanged += GameManager_OnGameStateChanged;
+    }
+
+    private void GameManager_OnGameStateChanged(object sender, System.EventArgs e)
+    {
+        if(GameManager.instance.IsStartGameState())
+        {
+            EmitStartGameSound();
+            Debug.Log("Holiii");
+        }
+    }
+
     public void EmitBackToHouseSound()
     {
         audioSource.clip = backToHouseSound;
@@ -33,6 +48,8 @@ public class SoundManager : MonoBehaviour
         audioSource.clip = finishGameSound;
         audioSource.Play();
     }
+
+    
 
     public void EmitGoalSound()
     {
@@ -57,6 +74,10 @@ public class SoundManager : MonoBehaviour
         audioSource.clip = secureZoneSound;
         audioSource.Play();
     }
+    public void EmitStartGameSound()
+    {
+        AudioSource.PlayClipAtPoint(startGameSound, Vector3.zero);
+    }
     public void EmitStartTurnSound()
     {
         audioSource.clip = startTurnSound;
@@ -65,8 +86,6 @@ public class SoundManager : MonoBehaviour
 
     public void EmitWinningSound()
     {
-        //audioSource.clip = winningSound;
-        //audioSource.Play();
         AudioSource.PlayClipAtPoint(winningSound,Vector3.zero);
     }
 

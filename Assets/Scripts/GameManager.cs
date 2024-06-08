@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
 
     public enum GameState
     {
+        StartGame,
         RollDiceState,
         MovePieceState,
         MovingPiece,
@@ -50,6 +51,8 @@ public class GameManager : MonoBehaviour
     float movePieceTimerMax = .25f;
     float rollDiceTimer;
     float rollDiceTimerMax = .3f;
+    float startGameTimer;
+    float startGameTimerMax = 1f;
 
     private void Awake()
     {
@@ -59,13 +62,24 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         rollDiceTimer = rollDiceTimerMax;
-        StartTurn();
+        startGameTimer = startGameTimerMax;
+        StartGame();
     }
 
     private void Update()
     {
         switch (currentState)
         {
+            case GameState.StartGame:
+                startGameTimer -= Time.deltaTime; 
+                
+                if(startGameTimer < 0)
+                {
+                    StartTurn();
+                    startGameTimer = startGameTimerMax;
+                }
+                break;
+
             case GameState.RollDiceState:
 
                 movePieceTimer = movePieceTimerMax;
@@ -109,6 +123,12 @@ public class GameManager : MonoBehaviour
                 }
                 break;
         }
+    }
+
+    void StartGame()
+    {
+        currentState = GameState.StartGame;
+        OnGameStateChanged?.Invoke(this, EventArgs.Empty);
     }
 
     void StartTurn()
@@ -210,6 +230,11 @@ public class GameManager : MonoBehaviour
     public bool IsMovePieceState()
     {
         return currentState == GameState.MovePieceState;
+    }
+
+    public bool IsStartGameState()
+    {
+        return currentState == GameState.StartGame;
     }
 
     public int GetDiceNumberRolled()
