@@ -9,7 +9,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
-    public static GameManager instance {  get; private set; }
+    public static GameManager instance { get; private set; }
 
     [SerializeField] private List<PlayerSO> players;
 
@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
 
                 rollDiceTimer -= Time.deltaTime;
 
-                if(rollDiceTimer <= 0)
+                if (rollDiceTimer <= 0)
                 {
                     canRollDice = true;
                 }
@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour
                 if (!playerCanPlay)
                 {
                     movePieceTimer -= Time.deltaTime;
-                    if(movePieceTimer < 0)
+                    if (movePieceTimer < 0)
                     {
                         EndTurn();
                         break;
@@ -105,7 +105,7 @@ public class GameManager : MonoBehaviour
                         }
                     }
 
-                    
+
                 }
                 break;
         }
@@ -136,6 +136,11 @@ public class GameManager : MonoBehaviour
             }
         }
 
+        Invoke("MovePieceState", .3f);
+    } 
+
+    private void MovePieceState()
+    {
         currentState = GameState.MovePieceState;
         OnGameStateChanged?.Invoke(this, EventArgs.Empty);
     }

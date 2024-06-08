@@ -1144,6 +1144,7 @@ GameObject:
   - component: {fileID: 170328948}
   - component: {fileID: 170328949}
   - component: {fileID: 170328950}
+  - component: {fileID: 170328951}
   m_Layer: 0
   m_Name: RedDice
   m_TagString: Untagged
@@ -1282,6 +1283,27 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0a4b4017be1881844886bfa0579e8b4f, type: 3}
   - {fileID: 21300000, guid: fb49a20e8f9f1f64d8eb913b7e9ba6ad, type: 3}
   - {fileID: 21300000, guid: 2861b54f55b04704dbcd97988d9fc630, type: 3}
+--- !u!95 &170328951
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170328946}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 783e2c9d03dcc204598c36a3b658cd02, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &170958225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1294,6 +1316,7 @@ GameObject:
   - component: {fileID: 170958226}
   - component: {fileID: 170958228}
   - component: {fileID: 170958229}
+  - component: {fileID: 170958230}
   m_Layer: 0
   m_Name: LightBlueDice
   m_TagString: Untagged
@@ -1362,9 +1385,9 @@ Transform:
   m_GameObject: {fileID: 170958225}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3925662, y: 0.0046391487, z: 0}
+  m_LocalPosition: {x: 0.3925662, y: 0.004639149, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 261398567}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1432,6 +1455,27 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0a4b4017be1881844886bfa0579e8b4f, type: 3}
   - {fileID: 21300000, guid: fb49a20e8f9f1f64d8eb913b7e9ba6ad, type: 3}
   - {fileID: 21300000, guid: 2861b54f55b04704dbcd97988d9fc630, type: 3}
+--- !u!95 &170958230
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170958225}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 783e2c9d03dcc204598c36a3b658cd02, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &171389913
 GameObject:
   m_ObjectHideFlags: 0
@@ -2367,6 +2411,7 @@ MonoBehaviour:
   - {fileID: 1155866813}
   - {fileID: 98649593}
   playerSO: {fileID: 0}
+  ripplePS: {fileID: 0}
 --- !u!95 &284669081
 Animator:
   serializedVersion: 5
@@ -5861,6 +5906,7 @@ GameObject:
   - component: {fileID: 709916864}
   - component: {fileID: 709916865}
   - component: {fileID: 709916866}
+  - component: {fileID: 709916867}
   m_Layer: 0
   m_Name: YellowDice
   m_TagString: Untagged
@@ -5999,6 +6045,27 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0a4b4017be1881844886bfa0579e8b4f, type: 3}
   - {fileID: 21300000, guid: fb49a20e8f9f1f64d8eb913b7e9ba6ad, type: 3}
   - {fileID: 21300000, guid: 2861b54f55b04704dbcd97988d9fc630, type: 3}
+--- !u!95 &709916867
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709916862}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 783e2c9d03dcc204598c36a3b658cd02, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &712302451
 GameObject:
   m_ObjectHideFlags: 0
@@ -6711,6 +6778,7 @@ GameObject:
   - component: {fileID: 903581607}
   - component: {fileID: 903581608}
   - component: {fileID: 903581609}
+  - component: {fileID: 903581610}
   m_Layer: 0
   m_Name: GreenDice
   m_TagString: Untagged
@@ -6849,6 +6917,27 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0a4b4017be1881844886bfa0579e8b4f, type: 3}
   - {fileID: 21300000, guid: fb49a20e8f9f1f64d8eb913b7e9ba6ad, type: 3}
   - {fileID: 21300000, guid: 2861b54f55b04704dbcd97988d9fc630, type: 3}
+--- !u!95 &903581610
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903581605}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 783e2c9d03dcc204598c36a3b658cd02, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &906831462
 GameObject:
   m_ObjectHideFlags: 0

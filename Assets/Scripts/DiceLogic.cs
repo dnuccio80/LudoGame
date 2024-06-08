@@ -7,12 +7,16 @@ using UnityEngine;
 
 public class DiceLogic : MonoBehaviour
 {
+    private const string ROLL_ANIMATION = "Roll";
+
     private DiceContainer diceContainer;
+    private Animator animator;
     [SerializeField] private Sprite[] diceNumbersSpriteArray;
 
     private void Awake()
     {
         diceContainer = GetComponentInParent<DiceContainer>();
+        animator = GetComponent<Animator>();
     }
 
     private void Start()
@@ -25,7 +29,6 @@ public class DiceLogic : MonoBehaviour
     {
         (diceContainer.GetPlayerColor() == GameManager.instance.GetCurrentPlayer() ? (Action)Show : Hide)();
 
-        if (GameManager.instance.IsMovePieceState()) GetComponent<SpriteRenderer>().sprite = diceNumbersSpriteArray[GameManager.instance.GetDiceNumberRolled() - 1];
     }
 
     public void RollDice()
@@ -34,6 +37,8 @@ public class DiceLogic : MonoBehaviour
         if (!GameManager.instance.GetCanRollDice()) return;
 
         GameManager.instance.RollDice();
+        animator.SetTrigger(ROLL_ANIMATION);
+        Invoke("SetNumberRolled", .14f);
         diceContainer.DiceRolled();
     }
 
@@ -45,6 +50,11 @@ public class DiceLogic : MonoBehaviour
     private void Hide()
     {
         gameObject.SetActive(false);
+    }
+
+    public void SetNumberRolled()
+    {
+        GetComponent<SpriteRenderer>().sprite = diceNumbersSpriteArray[GameManager.instance.GetDiceNumberRolled() - 1];
     }
 
 }
