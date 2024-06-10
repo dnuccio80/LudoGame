@@ -64,6 +64,9 @@ public class GameManager : MonoBehaviour
         rollDiceTimer = rollDiceTimerMax;
         startGameTimer = startGameTimerMax;
         StartGame();
+
+        Debug.Log("Number Players: " + PlayerStats.GetNumberPlayers());
+        Debug.Log("Color Player selected: " +  PlayerStats.GetPlayerColor());
     }
 
     private void Update()

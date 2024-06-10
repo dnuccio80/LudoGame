@@ -34,7 +34,6 @@ public class SoundManager : MonoBehaviour
         if(GameManager.instance.IsStartGameState())
         {
             EmitStartGameSound();
-            Debug.Log("Holiii");
         }
     }
 

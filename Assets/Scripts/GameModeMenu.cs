@@ -6,6 +6,8 @@ public class GameModeMenu : MonoBehaviour
 {
     public event EventHandler OnNextButtonPressed;
     public event EventHandler OnBackButtonPressed;
+    public event EventHandler OnTwoPlayersButtonPressed;
+    public event EventHandler OnFourPlayersButtonPressed;
 
     [SerializeField] private MainMenuButtons mainMenuButtons;
     [SerializeField] private SelectColorMenu selectColorMenu;
@@ -27,6 +29,18 @@ public class GameModeMenu : MonoBehaviour
         {
             OnNextButtonPressed?.Invoke(this,EventArgs.Empty);
             Hide();
+        });
+
+        twoPlayersToggleButton.onClick.AddListener(() =>
+        {
+            UpdateToggle(2);
+            OnTwoPlayersButtonPressed?.Invoke(this, EventArgs.Empty);
+        });
+
+        fourPlayersToggleButton.onClick.AddListener(() =>
+        {
+            UpdateToggle(4);
+            OnFourPlayersButtonPressed?.Invoke(this, EventArgs.Empty);
         });
     }
 
@@ -56,5 +70,9 @@ public class GameModeMenu : MonoBehaviour
     private void Hide()
     {
         gameObject.SetActive(false);
+    }
+    private void UpdateToggle(int _numPlayers)
+    {
+        PlayerStats.SetNumberPlayers(_numPlayers);
     }
 }
