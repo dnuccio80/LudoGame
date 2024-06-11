@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: LightBluePlayer
   m_EditorClassIdentifier: 
   colorPlayer: LightBlue
+  panelSprite: {fileID: 21300000, guid: 5063ba85d0d95084293e14c744f1434d, type: 3}

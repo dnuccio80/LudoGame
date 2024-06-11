@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: YellowPlayer
   m_EditorClassIdentifier: 
   colorPlayer: Yellow
+  panelSprite: {fileID: 21300000, guid: 008ede6b336d16048a9ea8e425b6c8b2, type: 3}
