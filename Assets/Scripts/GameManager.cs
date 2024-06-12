@@ -61,7 +61,7 @@ public class GameManager : MonoBehaviour
 
     public GameState currentState;
 
-    private int currentPlayer = 0;
+    private int currentPlayer;
     private int diceNumberRolled = 0;
     private int sixRolledQuantity;
     private int tokensCanMove;
@@ -89,10 +89,8 @@ public class GameManager : MonoBehaviour
     {
         rollDiceTimer = rollDiceTimerMax;
         startGameTimer = startGameTimerMax;
+        currentPlayer = UnityEngine.Random.Range(0, playersList.Count);
         StartGame();
-
-        Debug.Log("Number Players: " + PlayerStats.GetNumberPlayers());
-        Debug.Log("Color Player selected: " +  PlayerStats.GetPlayerColor());
     }
 
     private void Update()
