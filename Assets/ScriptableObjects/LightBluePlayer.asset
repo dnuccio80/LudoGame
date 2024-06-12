@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorPlayer: LightBlue
   panelSprite: {fileID: 21300000, guid: 5063ba85d0d95084293e14c744f1434d, type: 3}
+  tokenSprite: {fileID: -2105759880, guid: 383f8b5f0317b5449ab496d3adfccb35, type: 3}
+  rippleColor: {r: 0, g: 0.9607843, b: 1, a: 1}

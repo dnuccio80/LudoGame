@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CpuBehaviour : MonoBehaviour
 {
-    [SerializeField] private PlayerSO playerSO;
     [SerializeField] private TokenScript[] tokenScriptArray;
     [SerializeField] private DiceLogic dice;
 
@@ -16,6 +15,9 @@ public class CpuBehaviour : MonoBehaviour
     List<TokenScript> tokensOutOfSecureZoneList = new List<TokenScript>();
     List<TokenScript> tokensToMoveToFinalWayList = new List<TokenScript>();
     List<TokenScript> tokensToMoveToGoalList = new List<TokenScript>();
+
+    private PlayerSO playerSO;
+
 
     private void Start()
     {
@@ -31,6 +33,11 @@ public class CpuBehaviour : MonoBehaviour
         if (GameManager.instance.IsRollDiceState()) Invoke("RollDice", timeToInvoke);
         else if (GameManager.instance.IsMovePieceState()) Invoke("ThinkMovement", timeToInvoke);
 
+    }
+
+    public void SetPlayerSO(PlayerSO _playerSO)
+    {
+        playerSO = _playerSO;
     }
 
     private void RollDice()

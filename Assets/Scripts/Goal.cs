@@ -5,9 +5,14 @@ using UnityEngine;
 
 public class Goal : MonoBehaviour
 {
-    [SerializeField] private PlayerSO playerSO;
+    private PlayerSO playerSO;
 
     private int tokensOnGoal;
+
+    public void SetPlayerSO(PlayerSO _playerSO)
+    {
+        playerSO = _playerSO;
+    }
 
     public void TokenOnGoal()
     {

@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 8424371}
   - component: {fileID: 8424372}
   m_Layer: 0
-  m_Name: YellowWay
+  m_Name: Cpu3FinalWay
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -251,7 +251,7 @@ GameObject:
   - component: {fileID: 24263780}
   - component: {fileID: 24263781}
   m_Layer: 0
-  m_Name: GreenWay
+  m_Name: Cpu2FinalWay
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -669,7 +669,7 @@ GameObject:
   - component: {fileID: 98649594}
   - component: {fileID: 98649595}
   m_Layer: 0
-  m_Name: GreenWay6
+  m_Name: Cpu2FinalWay6
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -715,7 +715,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be44e351933d31b4da151f2c8fc4fd46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSO: {fileID: 11400000, guid: 627eb1d5985c2534ca01daa0f53b507b, type: 2}
 --- !u!1 &100099925
 GameObject:
   m_ObjectHideFlags: 0
@@ -728,7 +727,7 @@ GameObject:
   - component: {fileID: 100099927}
   - component: {fileID: 100099928}
   m_Layer: 0
-  m_Name: GreenWay4
+  m_Name: Cpu2FinalWay4
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -848,7 +847,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d3a024c3035aef40986f1626d82d050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSO: {fileID: 11400000, guid: 627eb1d5985c2534ca01daa0f53b507b, type: 2}
   tokenScriptArray:
   - {fileID: 991927947}
   - {fileID: 41937979}
@@ -899,7 +897,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d3a024c3035aef40986f1626d82d050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSO: {fileID: 11400000, guid: c2a9f9b9a0bc5ff4db76bcb6b0ba2fed, type: 2}
   tokenScriptArray:
   - {fileID: 1270815559}
   - {fileID: 731927465}
@@ -1075,7 +1072,7 @@ GameObject:
   - component: {fileID: 139533092}
   - component: {fileID: 139533093}
   m_Layer: 0
-  m_Name: RedWay4
+  m_Name: Cpu1FinalWay4
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1146,7 +1143,7 @@ GameObject:
   - component: {fileID: 170328950}
   - component: {fileID: 170328951}
   m_Layer: 0
-  m_Name: RedDice
+  m_Name: Cpu1Dice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1318,7 +1315,7 @@ GameObject:
   - component: {fileID: 170958229}
   - component: {fileID: 170958230}
   m_Layer: 0
-  m_Name: LightBlueDice
+  m_Name: PlayerDice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1960,7 +1957,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faca88be602f22442beb41057f3beef7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSO: {fileID: 11400000, guid: c174b65c00c795b47919326e1dfd2204, type: 2}
 --- !u!1001 &282325662
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2254,185 +2250,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dec855dbc6c181443bea44b09eb1bb1b, type: 3}
---- !u!1 &284669077
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 284669079}
-  - component: {fileID: 284669078}
-  - component: {fileID: 284669080}
-  - component: {fileID: 284669081}
-  m_Layer: 0
-  m_Name: perro
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!212 &284669078
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 284669077}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d691ce95ca861584e998ede9a3f35f82, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 3.69, y: 4}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &284669079
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 284669077}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.57, y: 4.46, z: 0}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &284669080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 284669077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b26490d6b5724b4b88b5b23fc856273, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ways:
-  - {fileID: 385787038}
-  - {fileID: 1886758795}
-  - {fileID: 2026270791}
-  - {fileID: 203973379}
-  - {fileID: 1856501340}
-  - {fileID: 1262438778}
-  - {fileID: 1197531406}
-  - {fileID: 712302452}
-  - {fileID: 11081288}
-  - {fileID: 1347408910}
-  - {fileID: 889077372}
-  - {fileID: 200746344}
-  - {fileID: 1753679406}
-  - {fileID: 496974161}
-  - {fileID: 1037061343}
-  - {fileID: 129795560}
-  - {fileID: 2015472032}
-  - {fileID: 314987818}
-  - {fileID: 1525421906}
-  - {fileID: 112142782}
-  - {fileID: 1716624286}
-  - {fileID: 448420623}
-  - {fileID: 1662509337}
-  - {fileID: 52191323}
-  - {fileID: 1723024513}
-  - {fileID: 1539588615}
-  - {fileID: 695808588}
-  - {fileID: 1333703044}
-  - {fileID: 2048138578}
-  - {fileID: 2041822973}
-  - {fileID: 2008580959}
-  - {fileID: 1371315309}
-  - {fileID: 656703492}
-  - {fileID: 1006026356}
-  - {fileID: 2140878627}
-  - {fileID: 446533230}
-  - {fileID: 296857578}
-  - {fileID: 1318147870}
-  - {fileID: 242049494}
-  - {fileID: 436348071}
-  - {fileID: 227172025}
-  - {fileID: 1675918095}
-  - {fileID: 236145935}
-  - {fileID: 2055060556}
-  - {fileID: 931864948}
-  - {fileID: 1739670912}
-  - {fileID: 473761023}
-  - {fileID: 712833274}
-  - {fileID: 989680361}
-  - {fileID: 773504420}
-  - {fileID: 1057042135}
-  - {fileID: 24263779}
-  - {fileID: 1828651394}
-  - {fileID: 1673414284}
-  - {fileID: 100099926}
-  - {fileID: 1155866813}
-  - {fileID: 98649593}
-  playerSO: {fileID: 0}
-  ripplePS: {fileID: 0}
---- !u!95 &284669081
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 284669077}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 658f7478dde204f41b3871d2a82f91db, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &286407074
 GameObject:
   m_ObjectHideFlags: 0
@@ -2445,7 +2262,7 @@ GameObject:
   - component: {fileID: 286407076}
   - component: {fileID: 286407077}
   m_Layer: 0
-  m_Name: RedWay2
+  m_Name: Cpu1FinalWay2
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -3274,7 +3091,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faca88be602f22442beb41057f3beef7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSO: {fileID: 11400000, guid: 6f123a4fe7a55c340935c47e6417f2c3, type: 2}
 --- !u!212 &376039389
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3706,6 +3522,7 @@ GameObject:
   m_Component:
   - component: {fileID: 408867925}
   - component: {fileID: 408867926}
+  - component: {fileID: 408867927}
   m_Layer: 0
   m_Name: TokenImage
   m_TagString: Untagged
@@ -3780,6 +3597,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &408867927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408867924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c89ba5ebc25c943b84af1160b59873, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &409907335
 GameObject:
   m_ObjectHideFlags: 0
@@ -3858,7 +3687,7 @@ GameObject:
   - component: {fileID: 428068008}
   - component: {fileID: 428068009}
   m_Layer: 0
-  m_Name: RedWay
+  m_Name: Cpu1FinalWay
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -4077,7 +3906,7 @@ GameObject:
   - component: {fileID: 471426738}
   - component: {fileID: 471426739}
   m_Layer: 0
-  m_Name: LightBlueWay6
+  m_Name: PlayerFinalWay6
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -4123,7 +3952,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be44e351933d31b4da151f2c8fc4fd46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSO: {fileID: 11400000, guid: c174b65c00c795b47919326e1dfd2204, type: 2}
 --- !u!1 &473761022
 GameObject:
   m_ObjectHideFlags: 0
@@ -4462,6 +4290,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 056c95426f1ca474c93da5af370a6f31, type: 3}
+--- !u!114 &482791652 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4191296056368118693, guid: 056c95426f1ca474c93da5af370a6f31, type: 3}
+  m_PrefabInstance: {fileID: 482791651}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b26490d6b5724b4b88b5b23fc856273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &496974160
 GameObject:
   m_ObjectHideFlags: 0
@@ -4780,7 +4619,7 @@ GameObject:
   - component: {fileID: 614239785}
   - component: {fileID: 614239786}
   m_Layer: 0
-  m_Name: YellowWay5
+  m_Name: Cpu3FinalWay5
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -4838,7 +4677,7 @@ GameObject:
   - component: {fileID: 634417833}
   - component: {fileID: 634417834}
   m_Layer: 0
-  m_Name: RedWay6
+  m_Name: Cpu1FinalWay6
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -4884,7 +4723,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be44e351933d31b4da151f2c8fc4fd46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSO: {fileID: 11400000, guid: 6f123a4fe7a55c340935c47e6417f2c3, type: 2}
 --- !u!1 &642155168
 GameObject:
   m_ObjectHideFlags: 0
@@ -4973,7 +4811,7 @@ GameObject:
   - component: {fileID: 662931663}
   - component: {fileID: 662931664}
   m_Layer: 0
-  m_Name: YellowWay6
+  m_Name: Cpu3FinalWay6
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -5019,7 +4857,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be44e351933d31b4da151f2c8fc4fd46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSO: {fileID: 11400000, guid: c2a9f9b9a0bc5ff4db76bcb6b0ba2fed, type: 2}
 --- !u!1 &664937757
 GameObject:
   m_ObjectHideFlags: 0
@@ -6044,6 +5881,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 056c95426f1ca474c93da5af370a6f31, type: 3}
+--- !u!114 &700035357 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4191296056368118693, guid: 056c95426f1ca474c93da5af370a6f31, type: 3}
+  m_PrefabInstance: {fileID: 700035356}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b26490d6b5724b4b88b5b23fc856273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &709916862
 GameObject:
   m_ObjectHideFlags: 0
@@ -6058,7 +5906,7 @@ GameObject:
   - component: {fileID: 709916866}
   - component: {fileID: 709916867}
   m_Layer: 0
-  m_Name: YellowDice
+  m_Name: Cpu3Dice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6949,7 +6797,7 @@ GameObject:
   - component: {fileID: 903581609}
   - component: {fileID: 903581610}
   m_Layer: 0
-  m_Name: GreenDice
+  m_Name: Cpu2Dice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7119,7 +6967,7 @@ GameObject:
   - component: {fileID: 906831464}
   - component: {fileID: 906831465}
   m_Layer: 0
-  m_Name: LightBlueWay3
+  m_Name: PlayerFinalWay3
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -7233,7 +7081,7 @@ GameObject:
   - component: {fileID: 938553523}
   - component: {fileID: 938553524}
   m_Layer: 0
-  m_Name: RedWay3
+  m_Name: Cpu1FinalWay3
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -7388,7 +7236,7 @@ GameObject:
   - component: {fileID: 989115044}
   - component: {fileID: 989115045}
   m_Layer: 0
-  m_Name: LightBlueWay
+  m_Name: PlayerFinalWay
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -8648,7 +8496,7 @@ GameObject:
   - component: {fileID: 1085134903}
   - component: {fileID: 1085134904}
   m_Layer: 0
-  m_Name: YellowWay2
+  m_Name: Cpu3FinalWay2
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -8987,6 +8835,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 056c95426f1ca474c93da5af370a6f31, type: 3}
+--- !u!114 &1113860004 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4191296056368118693, guid: 056c95426f1ca474c93da5af370a6f31, type: 3}
+  m_PrefabInstance: {fileID: 1113860003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b26490d6b5724b4b88b5b23fc856273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1133312560
 GameObject:
   m_ObjectHideFlags: 0
@@ -9030,7 +8889,7 @@ GameObject:
   - component: {fileID: 1155866814}
   - component: {fileID: 1155866815}
   m_Layer: 0
-  m_Name: GreenWay5
+  m_Name: Cpu2FinalWay5
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -9953,7 +9812,7 @@ GameObject:
   - component: {fileID: 1328713074}
   - component: {fileID: 1328713075}
   m_Layer: 0
-  m_Name: LightBlueWay5
+  m_Name: PlayerFinalWay5
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -10534,7 +10393,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faca88be602f22442beb41057f3beef7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSO: {fileID: 11400000, guid: c2a9f9b9a0bc5ff4db76bcb6b0ba2fed, type: 2}
 --- !u!212 &1403611860
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10659,7 +10517,7 @@ GameObject:
   - component: {fileID: 1433124442}
   - component: {fileID: 1433124443}
   m_Layer: 0
-  m_Name: RedWay5
+  m_Name: Cpu1FinalWay5
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -10811,6 +10669,86 @@ Transform:
   m_Children: []
   m_Father: {fileID: 664937758}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1457474609
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1457474610}
+  - component: {fileID: 1457474611}
+  m_Layer: 0
+  m_Name: TokensManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1457474610
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1457474609}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 949.8765, y: 554.6681, z: -12.639625}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1457474611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1457474609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c35517c1649d54f4ca97718be1e52150, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTokenScriptsArray:
+  - {fileID: 482791652}
+  - {fileID: 1113860004}
+  - {fileID: 2006258754}
+  - {fileID: 700035357}
+  cpu1TokenScriptsArray:
+  - {fileID: 1414598140}
+  - {fileID: 563181419}
+  - {fileID: 908427539}
+  - {fileID: 1363799736}
+  cpu2TokenScriptsArray:
+  - {fileID: 991927947}
+  - {fileID: 41937979}
+  - {fileID: 143996961}
+  - {fileID: 1673060876}
+  cpu3TokenScriptsArray:
+  - {fileID: 1270815559}
+  - {fileID: 731927465}
+  - {fileID: 71203590}
+  - {fileID: 350608502}
+  playerDiceContainer: {fileID: 261398568}
+  cpu1DiceContainer: {fileID: 376039388}
+  cpu2DiceContainer: {fileID: 1718140715}
+  cpu3DiceContainer: {fileID: 1403611859}
+  cpu1CpuBehaviour: {fileID: 1835229817}
+  cpu2CpuBehaviour: {fileID: 116269706}
+  cpu3CpuBehaviour: {fileID: 116673375}
+  playerGoal: {fileID: 471426739}
+  cpu1Goal: {fileID: 634417834}
+  cpu2Goal: {fileID: 98649595}
+  cpu3Goal: {fileID: 662931664}
+  playerSOArray:
+  - {fileID: 11400000, guid: c174b65c00c795b47919326e1dfd2204, type: 2}
+  - {fileID: 11400000, guid: 6f123a4fe7a55c340935c47e6417f2c3, type: 2}
+  - {fileID: 11400000, guid: 627eb1d5985c2534ca01daa0f53b507b, type: 2}
+  - {fileID: 11400000, guid: c2a9f9b9a0bc5ff4db76bcb6b0ba2fed, type: 2}
 --- !u!1 &1494874798
 GameObject:
   m_ObjectHideFlags: 0
@@ -10821,6 +10759,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1494874799}
   - component: {fileID: 1494874800}
+  - component: {fileID: 1494874801}
   m_Layer: 0
   m_Name: TokenImage
   m_TagString: Untagged
@@ -10895,6 +10834,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1494874801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494874798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c89ba5ebc25c943b84af1160b59873, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1525421905
 GameObject:
   m_ObjectHideFlags: 0
@@ -10995,6 +10946,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1596358965}
   - component: {fileID: 1596358966}
+  - component: {fileID: 1596358967}
   m_Layer: 0
   m_Name: TokenImage
   m_TagString: Untagged
@@ -11069,6 +11021,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1596358967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596358964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c89ba5ebc25c943b84af1160b59873, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1604266100
 GameObject:
   m_ObjectHideFlags: 0
@@ -11322,7 +11286,7 @@ GameObject:
   - component: {fileID: 1635187443}
   - component: {fileID: 1635187444}
   m_Layer: 0
-  m_Name: LightBlueWay2
+  m_Name: PlayerFinalWay2
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -11436,7 +11400,7 @@ GameObject:
   - component: {fileID: 1673414285}
   - component: {fileID: 1673414286}
   m_Layer: 0
-  m_Name: GreenWay3
+  m_Name: Cpu2FinalWay3
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -11537,6 +11501,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1676152334}
   - component: {fileID: 1676152335}
+  - component: {fileID: 1676152336}
   m_Layer: 0
   m_Name: TokenImage
   m_TagString: Untagged
@@ -11611,6 +11576,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1676152336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676152333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c89ba5ebc25c943b84af1160b59873, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1678255962
 GameObject:
   m_ObjectHideFlags: 0
@@ -11891,7 +11868,7 @@ GameObject:
   - component: {fileID: 1693189743}
   - component: {fileID: 1693189744}
   m_Layer: 0
-  m_Name: YellowWay4
+  m_Name: Cpu3FinalWay4
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -11949,7 +11926,7 @@ GameObject:
   - component: {fileID: 1716305421}
   - component: {fileID: 1716305422}
   m_Layer: 0
-  m_Name: LightBlueWay4
+  m_Name: PlayerFinalWay4
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -12070,7 +12047,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faca88be602f22442beb41057f3beef7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSO: {fileID: 11400000, guid: 627eb1d5985c2534ca01daa0f53b507b, type: 2}
 --- !u!212 &1718140716
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12288,7 +12264,7 @@ GameObject:
   - component: {fileID: 1828651395}
   - component: {fileID: 1828651396}
   m_Layer: 0
-  m_Name: GreenWay2
+  m_Name: Cpu2FinalWay2
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -12378,7 +12354,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d3a024c3035aef40986f1626d82d050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSO: {fileID: 11400000, guid: 6f123a4fe7a55c340935c47e6417f2c3, type: 2}
   tokenScriptArray:
   - {fileID: 1414598140}
   - {fileID: 563181419}
@@ -13181,6 +13156,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 056c95426f1ca474c93da5af370a6f31, type: 3}
+--- !u!114 &2006258754 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4191296056368118693, guid: 056c95426f1ca474c93da5af370a6f31, type: 3}
+  m_PrefabInstance: {fileID: 2006258753}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b26490d6b5724b4b88b5b23fc856273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2008580958
 GameObject:
   m_ObjectHideFlags: 0
@@ -13604,7 +13590,7 @@ GameObject:
   - component: {fileID: 2077483620}
   - component: {fileID: 2077483621}
   m_Layer: 0
-  m_Name: YellowWay3
+  m_Name: Cpu3FinalWay3
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -13750,10 +13736,10 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 2059457595}
   - {fileID: 330644554}
+  - {fileID: 1457474610}
   - {fileID: 1232628286}
   - {fileID: 1604266101}
   - {fileID: 1854783183}
-  - {fileID: 284669079}
   - {fileID: 261398567}
   - {fileID: 376039390}
   - {fileID: 1718140717}
@@ -13767,8 +13753,8 @@ SceneRoots:
   - {fileID: 1008353093}
   - {fileID: 282325662}
   - {fileID: 1213178233}
-  - {fileID: 1363799735}
   - {fileID: 678184347}
+  - {fileID: 1363799735}
   - {fileID: 667140618}
   - {fileID: 1077087968}
   - {fileID: 1944792368}

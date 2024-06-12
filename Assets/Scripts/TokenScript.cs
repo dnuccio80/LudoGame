@@ -9,11 +9,13 @@ public class TokenScript : MonoBehaviour
     public event EventHandler OnStateChanged;
     
     [SerializeField] private Transform[] ways;
-    [SerializeField] private PlayerSO playerSO;
+    //[SerializeField] private PlayerSO playerSO;
     [SerializeField] private ParticleSystem ripplePS;
     
     private int index;
     private bool isOutHouse;
+    private PlayerSO playerSO;
+
 
     private enum MoveState
     {
@@ -64,6 +66,16 @@ public class TokenScript : MonoBehaviour
             OnStateChanged?.Invoke(this, EventArgs.Empty);
 
         }
+    }
+
+    public void SetPlayerSO(PlayerSO _playerSO)
+    {
+        playerSO = _playerSO;
+    }
+
+    public PlayerSO GetPlayerSO()
+    {
+        return playerSO;
     }
 
     public void TryMovePiece()

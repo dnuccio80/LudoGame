@@ -10,7 +10,7 @@ public class DiceContainer : MonoBehaviour
 
     public event EventHandler OnDiceStateChanged;
     
-    [SerializeField] private PlayerSO playerSO;
+    private PlayerSO playerSO;
 
 
     private enum DiceState
@@ -32,6 +32,13 @@ public class DiceContainer : MonoBehaviour
         if (GameManager.instance.IsRollDiceState()) ResetDice();
         else if (GameManager.instance.IsMovePieceState()) DiceRolled();
     }
+
+    public void SetPlayerSO(PlayerSO _playerSO)
+    {
+        playerSO = _playerSO;
+    }
+
+    public PlayerSO GetPlayerSO() { return playerSO; }
 
     public string GetPlayerColor()
     {

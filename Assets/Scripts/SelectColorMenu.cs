@@ -92,6 +92,6 @@ public class SelectColorMenu : MonoBehaviour
 
     private void UpdateToggle(PlayerSO playerSO)
     {
-        PlayerStats.SetPlayerColor(playerSO);
+        PlayerStats.SetPlayerSO(playerSO);
     }
 }

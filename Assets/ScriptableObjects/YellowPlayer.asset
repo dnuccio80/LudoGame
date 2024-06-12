@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorPlayer: Yellow
   panelSprite: {fileID: 21300000, guid: 008ede6b336d16048a9ea8e425b6c8b2, type: 3}
+  tokenSprite: {fileID: -453412987, guid: 383f8b5f0317b5449ab496d3adfccb35, type: 3}
+  rippleColor: {r: 0.9803922, g: 0.9686275, b: 0, a: 1}
