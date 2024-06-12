@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Resources;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
@@ -11,8 +12,8 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance { get; private set; }
 
-    [SerializeField] private List<PlayerSO> players;
-
+    [SerializeField] private List<PlayerSO> playersList;
+    
     private List<PlayerSO> CpuPlayers = new List<PlayerSO>();
 
     public event EventHandler OnGameStateChanged;
@@ -33,6 +34,30 @@ public class GameManager : MonoBehaviour
         MovingPiece,
         EndTurn
     }
+
+    [Header("Token Script")]
+    [SerializeField] private TokenScript[] playerTokenScriptsArray;
+    [SerializeField] private TokenScript[] cpu1TokenScriptsArray;
+    [SerializeField] private TokenScript[] cpu2TokenScriptsArray;
+    [SerializeField] private TokenScript[] cpu3TokenScriptsArray;
+
+    [Header("Dice Containers")]
+    [SerializeField] private DiceContainer playerDiceContainer;
+    [SerializeField] private DiceContainer cpu1DiceContainer;
+    [SerializeField] private DiceContainer cpu2DiceContainer;
+    [SerializeField] private DiceContainer cpu3DiceContainer;
+
+    [Header("Cpu Brains")]
+    [SerializeField] private CpuBehaviour cpu1CpuBehaviour;
+    [SerializeField] private CpuBehaviour cpu2CpuBehaviour;
+    [SerializeField] private CpuBehaviour cpu3CpuBehaviour;
+
+    [Header("Goals")]
+    [SerializeField] private Goal playerGoal;
+    [SerializeField] private Goal cpu1Goal;
+    [SerializeField] private Goal cpu2Goal;
+    [SerializeField] private Goal cpu3Goal;
+
 
     public GameState currentState;
 
@@ -57,6 +82,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        SetVisual();
     }
 
     private void Start()
@@ -128,6 +154,69 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void SetVisual()
+    {
+
+        int index = 0;
+
+
+        foreach (TokenScript token in playerTokenScriptsArray)
+        {
+            token.SetPlayerSO(PlayerStats.GetPlayerSO());
+            playerDiceContainer.SetPlayerSO(PlayerStats.GetPlayerSO());
+            playerGoal.SetPlayerSO(PlayerStats.GetPlayerSO());
+        }
+
+        for (int i = 0; i < playersList.Count; i++)
+        {
+            if (playersList[i].ColorPlayer == PlayerStats.GetPlayerColor())
+            {
+                index = i;
+                break;
+            }
+        }
+
+        if (index < playersList.Count - 1) index++;
+        else index = 0;
+
+        foreach (TokenScript token in cpu1TokenScriptsArray)
+        {
+            token.SetPlayerSO(playersList[index]);
+        }
+
+        cpu1DiceContainer.SetPlayerSO(playersList[index]);
+        cpu1CpuBehaviour.SetPlayerSO(playersList[index]);
+        cpu1Goal.SetPlayerSO(playersList[index]);
+
+
+        if (index < playersList.Count - 1) index++;
+        else index = 0;
+
+        foreach (TokenScript token in cpu2TokenScriptsArray)
+        {
+            token.SetPlayerSO(playersList[index]);
+        }
+
+        cpu2DiceContainer.SetPlayerSO(playersList[index]);
+        cpu2CpuBehaviour.SetPlayerSO(playersList[index]);
+        cpu2Goal.SetPlayerSO(playersList[index]);
+
+
+        if (index < playersList.Count - 1) index++;
+        else index = 0;
+
+        foreach (TokenScript token in cpu3TokenScriptsArray)
+        {
+            token.SetPlayerSO(playersList[index]);
+        }
+
+        cpu3DiceContainer.SetPlayerSO(playersList[index]);
+        cpu3CpuBehaviour.SetPlayerSO(playersList[index]);
+        cpu3Goal.SetPlayerSO(playersList[index]);
+
+    }
+
+
     void StartGame()
     {
         currentState = GameState.StartGame;
@@ -174,7 +263,7 @@ public class GameManager : MonoBehaviour
     {
         if(diceNumberRolled != 6 || sixRolledQuantity == 3 || !playerCanPlay)
         {
-            currentPlayer = (currentPlayer + 1) % players.Count;
+            currentPlayer = (currentPlayer + 1) % playersList.Count;
             sixRolledQuantity = 0;
         }
 
@@ -190,18 +279,18 @@ public class GameManager : MonoBehaviour
 
     public string GetCurrentPlayer()
     {
-        currentPlayerColor = players[currentPlayer].ColorPlayer;
+        currentPlayerColor = playersList[currentPlayer].ColorPlayer;
 
         return currentPlayerColor;
     }
 
     public void SetCpuPlayer(PlayerSO playerSO)
     {
-        for(int i = 0; i < players.Count; i++)
+        for(int i = 0; i < playersList.Count; i++)
         {
-            if (players[i].ColorPlayer == playerSO.ColorPlayer)
+            if (playersList[i].ColorPlayer == playerSO.ColorPlayer)
             {
-                CpuPlayers.Add(players[i]);
+                CpuPlayers.Add(playersList[i]);
             }
         }
     }
@@ -253,11 +342,11 @@ public class GameManager : MonoBehaviour
 
     public void PlayerWin(PlayerSO playerSO)
     {
-        foreach(PlayerSO player in players)
+        foreach(PlayerSO player in playersList)
         {
             if(playerSO.ColorPlayer == player.ColorPlayer)
             {
-                players.Remove(player);
+                playersList.Remove(player);
                 break;
             }
         }
