@@ -15,6 +15,7 @@ public class TokenVisual_DiceContainer : MonoBehaviour
 
     void Start()
     {
+        if (!diceContainer.GetCanPlay()) return;
         tokenSprite.sprite = diceContainer.GetPlayerSO().TokenSprite;
     }
 

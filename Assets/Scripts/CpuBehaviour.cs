@@ -18,9 +18,17 @@ public class CpuBehaviour : MonoBehaviour
 
     private PlayerSO playerSO;
 
+    private bool canPlay;
+
 
     private void Start()
     {
+        if (!canPlay)
+        {
+            Hide();
+            return;
+        }
+
         SetCpuPlayer();
         UpdateAllLists();
         GameManager.instance.OnGameStateChanged += GameManager_OnGameStateChanged;
@@ -43,6 +51,16 @@ public class CpuBehaviour : MonoBehaviour
     private void RollDice()
     {
         dice.RollDice();
+    }
+
+    public void CpuCanPlay()
+    {
+        canPlay = true;
+    }
+
+    public bool GetCpuCanPlay()
+    {
+        return canPlay;
     }
 
     private void ThinkMovement()
@@ -206,4 +224,8 @@ public class CpuBehaviour : MonoBehaviour
         tokensCanMoveList[Random.Range(0, tokensCanMoveList.Count)].TryMovePiece();
     }
 
+    private void Hide()
+    {
+        gameObject.SetActive(false);
+    }
 }

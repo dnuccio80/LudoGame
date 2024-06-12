@@ -21,6 +21,11 @@ public class DiceLogic : MonoBehaviour
 
     private void Start()
     {
+        if(!diceContainer.GetCanPlay())
+        {
+            Hide();
+            return;
+        }
         GameManager.instance.OnGameStateChanged += GameManager_OnGameStateChanged;
         Hide();
     }

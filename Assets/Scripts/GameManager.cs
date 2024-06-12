@@ -6,6 +6,7 @@ using System.Resources;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
 {
@@ -163,6 +164,8 @@ public class GameManager : MonoBehaviour
             token.SetPlayerSO(PlayerStats.GetPlayerSO());
             playerDiceContainer.SetPlayerSO(PlayerStats.GetPlayerSO());
             playerGoal.SetPlayerSO(PlayerStats.GetPlayerSO());
+            playerDiceContainer.SetCanPlay();
+            token.SetCanPlay();
         }
 
         for (int i = 0; i < playersList.Count; i++)
@@ -174,44 +177,75 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        if (index < playersList.Count - 1) index++;
-        else index = 0;
-
-        foreach (TokenScript token in cpu1TokenScriptsArray)
+        if (PlayerStats.GetNumberPlayers() == 2)
         {
-            token.SetPlayerSO(playersList[index]);
+
+            index = (index + 2) % playersList.Count;
+
+            PlayerSO CpuPlayerSO = playersList[index];
+
+            playersList.Clear();
+
+            playersList.Add(PlayerStats.GetPlayerSO());
+            playersList.Add(CpuPlayerSO);
+
+            foreach(TokenScript token in cpu2TokenScriptsArray)
+            {
+                token.SetPlayerSO(CpuPlayerSO);
+                token.SetCanPlay();
+            }
+
+            SetNewCpuPlayer(CpuPlayerSO, cpu2DiceContainer, cpu2CpuBehaviour, cpu2Goal);
+
+
+        }
+        else if(PlayerStats.GetNumberPlayers() == 4)
+        {
+            index = (index + 1) % playersList.Count;
+
+            foreach (TokenScript token in cpu1TokenScriptsArray)
+            {
+                token.SetPlayerSO(playersList[index]);
+                token.SetCanPlay();
+
+            }
+
+            SetNewCpuPlayer(playersList[index], cpu1DiceContainer, cpu1CpuBehaviour, cpu1Goal);
+
+
+            index = (index + 1) % playersList.Count;
+
+            foreach (TokenScript token in cpu2TokenScriptsArray)
+            {
+                token.SetPlayerSO(playersList[index]);
+                token.SetCanPlay();
+
+            }
+
+            SetNewCpuPlayer(playersList[index], cpu2DiceContainer, cpu2CpuBehaviour, cpu2Goal);
+
+
+            index = (index + 1) % playersList.Count;
+
+            foreach (TokenScript token in cpu3TokenScriptsArray)
+            {
+                token.SetPlayerSO(playersList[index]);
+                token.SetCanPlay();
+
+            }
+
+            SetNewCpuPlayer(playersList[index], cpu3DiceContainer, cpu3CpuBehaviour, cpu3Goal);
         }
 
-        cpu1DiceContainer.SetPlayerSO(playersList[index]);
-        cpu1CpuBehaviour.SetPlayerSO(playersList[index]);
-        cpu1Goal.SetPlayerSO(playersList[index]);
+    }
 
-
-        if (index < playersList.Count - 1) index++;
-        else index = 0;
-
-        foreach (TokenScript token in cpu2TokenScriptsArray)
-        {
-            token.SetPlayerSO(playersList[index]);
-        }
-
-        cpu2DiceContainer.SetPlayerSO(playersList[index]);
-        cpu2CpuBehaviour.SetPlayerSO(playersList[index]);
-        cpu2Goal.SetPlayerSO(playersList[index]);
-
-
-        if (index < playersList.Count - 1) index++;
-        else index = 0;
-
-        foreach (TokenScript token in cpu3TokenScriptsArray)
-        {
-            token.SetPlayerSO(playersList[index]);
-        }
-
-        cpu3DiceContainer.SetPlayerSO(playersList[index]);
-        cpu3CpuBehaviour.SetPlayerSO(playersList[index]);
-        cpu3Goal.SetPlayerSO(playersList[index]);
-
+    private void SetNewCpuPlayer(PlayerSO playerSO, DiceContainer cpuDiceContainer, CpuBehaviour cpuBehaviour, Goal cpuGoal)
+    {
+        cpuDiceContainer.SetCanPlay();
+        cpuBehaviour.CpuCanPlay();
+        cpuDiceContainer.SetPlayerSO(playerSO);
+        cpuBehaviour.SetPlayerSO(playerSO);
+        cpuGoal.SetPlayerSO(playerSO);
     }
 
 

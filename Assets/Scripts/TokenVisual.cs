@@ -16,6 +16,7 @@ public class TokenVisual : MonoBehaviour
 
     private void Start()
     {
+        if (!tokenScript.GetCanPlay()) return; 
         GameManager.instance.OnGameStateChanged += GameManager_OnGameStateChanged;
         spriteRenderer.sprite = tokenScript.GetPlayerSO().TokenSprite;
     }

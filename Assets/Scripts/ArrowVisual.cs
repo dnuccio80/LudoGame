@@ -30,6 +30,12 @@ public class ArrowVisual : MonoBehaviour
             return;
         }
 
+        if (!diceContainer.GetCanPlay())
+        {
+            Hide();
+            return;
+        }
+
         (diceContainer.GetPlayerColor() == GameManager.instance.GetCurrentPlayer() ? (Action) Show : Hide)();
     }
 

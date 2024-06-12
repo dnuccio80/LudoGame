@@ -9,12 +9,13 @@ public class TokenScript : MonoBehaviour
     public event EventHandler OnStateChanged;
     
     [SerializeField] private Transform[] ways;
-    //[SerializeField] private PlayerSO playerSO;
     [SerializeField] private ParticleSystem ripplePS;
     
     private int index;
     private bool isOutHouse;
+    private bool canPlay; // To manage if can play in the game, depend on if players are 2 or 4.
     private PlayerSO playerSO;
+
 
 
     private enum MoveState
@@ -33,6 +34,12 @@ public class TokenScript : MonoBehaviour
 
     private void Start()
     {
+        if (!canPlay)
+        {
+            Hide();
+            return;
+        }
+
         GameManager.instance.OnGameStateChanged += GameManager_OnGameStateChanged;
         GameManager.instance.OnMoveAutomatically += GameManager_OnMoveAutomatically;
     }
@@ -76,6 +83,16 @@ public class TokenScript : MonoBehaviour
     public PlayerSO GetPlayerSO()
     {
         return playerSO;
+    }
+
+    public void SetCanPlay()
+    {
+        canPlay = true;
+    }
+
+    public bool GetCanPlay()
+    {
+        return canPlay;
     }
 
     public void TryMovePiece()
@@ -259,6 +276,11 @@ public class TokenScript : MonoBehaviour
     {
         // This is when cpu roll a 6, the first move cpu will do, is Get a token out of house
         return isOutHouse;
+    }
+
+    private void Hide()
+    {
+        gameObject.SetActive(false);
     }
 
 }

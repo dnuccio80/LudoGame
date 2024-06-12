@@ -12,6 +12,7 @@ public class DiceContainer : MonoBehaviour
     
     private PlayerSO playerSO;
 
+    private bool canPlay;
 
     private enum DiceState
     {
@@ -36,6 +37,16 @@ public class DiceContainer : MonoBehaviour
     public void SetPlayerSO(PlayerSO _playerSO)
     {
         playerSO = _playerSO;
+    }
+
+    public void SetCanPlay()
+    {
+        canPlay = true;
+    }
+
+    public bool GetCanPlay()
+    {
+        return canPlay;
     }
 
     public PlayerSO GetPlayerSO() { return playerSO; }
