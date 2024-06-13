@@ -6,9 +6,10 @@ using UnityEngine;
 public class WinCrown : MonoBehaviour
 {
 
-    [SerializeField] private PlayerSO playerSO;
     [SerializeField] private TextMeshProUGUI numberWinText;
 
+    private PlayerSO playerSO;
+    
     private void Start()
     {
         GameManager.instance.OnPlayerWin += GameManager_OnPlayerWin;
@@ -22,6 +23,11 @@ public class WinCrown : MonoBehaviour
             Show();
             numberWinText.text = e.playerWinPosition.ToString();
         }
+    }
+
+    public void SetPlayerSO(PlayerSO _playerSO)
+    {
+        playerSO = _playerSO;
     }
 
     private void Show()

@@ -715,6 +715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be44e351933d31b4da151f2c8fc4fd46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerName: Cpu2
 --- !u!1 &100099925
 GameObject:
   m_ObjectHideFlags: 0
@@ -1597,7 +1598,7 @@ GameObject:
   - component: {fileID: 192739874}
   - component: {fileID: 192739875}
   m_Layer: 5
-  m_Name: GreenWin
+  m_Name: Cpu2WinCrownUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1636,7 +1637,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a5dfc22b0cff8646b9dcad143292ead, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSO: {fileID: 11400000, guid: 627eb1d5985c2534ca01daa0f53b507b, type: 2}
   numberWinText: {fileID: 330758655}
 --- !u!1 &200746343
 GameObject:
@@ -4171,6 +4171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be44e351933d31b4da151f2c8fc4fd46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerName: Player
 --- !u!1 &473761022
 GameObject:
   m_ObjectHideFlags: 0
@@ -4723,7 +4724,7 @@ GameObject:
   - component: {fileID: 565138397}
   - component: {fileID: 565138398}
   m_Layer: 5
-  m_Name: RedWin
+  m_Name: Cpu1WinCrownUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4762,7 +4763,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a5dfc22b0cff8646b9dcad143292ead, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSO: {fileID: 11400000, guid: 6f123a4fe7a55c340935c47e6417f2c3, type: 2}
   numberWinText: {fileID: 1686252679}
 --- !u!1 &590163867
 GameObject:
@@ -4942,6 +4942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be44e351933d31b4da151f2c8fc4fd46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerName: Cpu1
 --- !u!1 &642155168
 GameObject:
   m_ObjectHideFlags: 0
@@ -5076,6 +5077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be44e351933d31b4da151f2c8fc4fd46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerName: Cpu3
 --- !u!1 &664937757
 GameObject:
   m_ObjectHideFlags: 0
@@ -5415,7 +5417,7 @@ GameObject:
   - component: {fileID: 669353358}
   - component: {fileID: 669353359}
   m_Layer: 5
-  m_Name: YellowWin
+  m_Name: Cpu3WinCrownUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5454,7 +5456,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a5dfc22b0cff8646b9dcad143292ead, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSO: {fileID: 11400000, guid: c2a9f9b9a0bc5ff4db76bcb6b0ba2fed, type: 2}
   numberWinText: {fileID: 714148775}
 --- !u!1001 &678184347
 PrefabInstance:
@@ -5784,7 +5785,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &681989511
 MonoBehaviour:
@@ -5806,7 +5807,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Cpu3
+  m_text: Fourth Position
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8bf7950a016072c4c8070bcce86053cc, type: 2}
   m_sharedMaterial: {fileID: 1688639668821893235, guid: 8bf7950a016072c4c8070bcce86053cc, type: 2}
@@ -5849,7 +5850,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -6932,7 +6933,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 3
-  m_Spacing: 10
+  m_Spacing: 58.94
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -7117,7 +7118,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &799438631
 MonoBehaviour:
@@ -7139,7 +7140,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Player
+  m_text: First Position
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8bf7950a016072c4c8070bcce86053cc, type: 2}
   m_sharedMaterial: {fileID: 1688639668821893235, guid: 8bf7950a016072c4c8070bcce86053cc, type: 2}
@@ -7182,7 +7183,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -10100,7 +10101,6 @@ RectTransform:
   - {fileID: 669353358}
   - {fileID: 1297814709}
   - {fileID: 1834347926}
-  - {fileID: 1946673040}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -11505,7 +11505,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1455393498
 MonoBehaviour:
@@ -11527,7 +11527,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Cpu1
+  m_text: Second Position
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8bf7950a016072c4c8070bcce86053cc, type: 2}
   m_sharedMaterial: {fileID: 1688639668821893235, guid: 8bf7950a016072c4c8070bcce86053cc, type: 2}
@@ -11570,7 +11570,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -13116,7 +13116,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1717255877
 MonoBehaviour:
@@ -13138,7 +13138,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Cpu2
+  m_text: Third Position
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8bf7950a016072c4c8070bcce86053cc, type: 2}
   m_sharedMaterial: {fileID: 1688639668821893235, guid: 8bf7950a016072c4c8070bcce86053cc, type: 2}
@@ -13181,7 +13181,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -13605,6 +13605,7 @@ RectTransform:
   - {fileID: 2086862340}
   - {fileID: 756198996}
   - {fileID: 1731111301}
+  - {fileID: 1946673040}
   m_Father: {fileID: 1232628286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -13624,10 +13625,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31a6ba8f87429bc40b426950289dc0be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstPositionText: {fileID: 799438631}
-  secondPositionText: {fileID: 1455393498}
-  thirdPositionText: {fileID: 1717255877}
-  fourthPositionText: {fileID: 681989511}
+  positionsTextArray:
+  - {fileID: 799438631}
+  - {fileID: 1455393498}
+  - {fileID: 1717255877}
+  - {fileID: 681989511}
 --- !u!1 &1835229815
 GameObject:
   m_ObjectHideFlags: 0
@@ -13689,7 +13691,7 @@ GameObject:
   - component: {fileID: 1843938916}
   - component: {fileID: 1843938917}
   m_Layer: 5
-  m_Name: LightBlueWin
+  m_Name: PlayerWinCrownUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13728,7 +13730,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a5dfc22b0cff8646b9dcad143292ead, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSO: {fileID: 11400000, guid: c174b65c00c795b47919326e1dfd2204, type: 2}
   numberWinText: {fileID: 1678255964}
 --- !u!1 &1854783180
 GameObject:
@@ -14204,14 +14205,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1946673039}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 424007064}
   - {fileID: 2033772857}
-  m_Father: {fileID: 1232628286}
+  m_Father: {fileID: 1834347926}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -15097,6 +15098,10 @@ MonoBehaviour:
   cpu1Goal: {fileID: 634417834}
   cpu2Goal: {fileID: 98649595}
   cpu3Goal: {fileID: 662931664}
+  playerWinCrown: {fileID: 1843938917}
+  cpu1WinCrown: {fileID: 565138398}
+  cpu2WinCrown: {fileID: 192739875}
+  cpu3WinCrown: {fileID: 669353359}
   currentState: 0
 --- !u!1 &2077483618
 GameObject:

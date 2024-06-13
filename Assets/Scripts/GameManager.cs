@@ -14,11 +14,13 @@ public class GameManager : MonoBehaviour
     public static GameManager instance { get; private set; }
 
     [SerializeField] private List<PlayerSO> playersList;
-    
+
     private List<PlayerSO> CpuPlayers = new List<PlayerSO>();
+    private List<string> winList = new List<string>();
 
     public event EventHandler OnGameStateChanged;
     public event EventHandler OnMoveAutomatically;
+    public event EventHandler<OnGameFinishedEventArgs> OnGameFinished;
     public event EventHandler<OnPlayerWinEventArgs> OnPlayerWin;
 
     public class OnPlayerWinEventArgs : EventArgs
@@ -27,13 +29,19 @@ public class GameManager : MonoBehaviour
         public int playerWinPosition;
     }
 
+    public class OnGameFinishedEventArgs : EventArgs
+    {
+        public List<string> winList;
+    }
+
     public enum GameState
     {
         StartGame,
         RollDiceState,
         MovePieceState,
         MovingPiece,
-        EndTurn
+        EndTurn,
+        //GameFinished
     }
 
     [Header("Token Script")]
@@ -58,6 +66,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Goal cpu1Goal;
     [SerializeField] private Goal cpu2Goal;
     [SerializeField] private Goal cpu3Goal;
+
+    [Header("Win Crowns UI")]
+    [SerializeField] private WinCrown playerWinCrown;
+    [SerializeField] private WinCrown cpu1WinCrown;
+    [SerializeField] private WinCrown cpu2WinCrown;
+    [SerializeField] private WinCrown cpu3WinCrown;
 
 
     public GameState currentState;
@@ -164,6 +178,7 @@ public class GameManager : MonoBehaviour
             token.SetPlayerSO(PlayerStats.GetPlayerSO());
             playerDiceContainer.SetPlayerSO(PlayerStats.GetPlayerSO());
             playerGoal.SetPlayerSO(PlayerStats.GetPlayerSO());
+            playerWinCrown.SetPlayerSO(PlayerStats.GetPlayerSO());
             playerDiceContainer.SetCanPlay();
             token.SetCanPlay();
         }
@@ -195,7 +210,7 @@ public class GameManager : MonoBehaviour
                 token.SetCanPlay();
             }
 
-            SetNewCpuPlayer(CpuPlayerSO, cpu2DiceContainer, cpu2CpuBehaviour, cpu2Goal);
+            SetNewCpuPlayer(CpuPlayerSO, cpu2DiceContainer, cpu2CpuBehaviour, cpu2Goal, cpu2WinCrown);
 
 
         }
@@ -210,7 +225,7 @@ public class GameManager : MonoBehaviour
 
             }
 
-            SetNewCpuPlayer(playersList[index], cpu1DiceContainer, cpu1CpuBehaviour, cpu1Goal);
+            SetNewCpuPlayer(playersList[index], cpu1DiceContainer, cpu1CpuBehaviour, cpu1Goal, cpu1WinCrown);
 
 
             index = (index + 1) % playersList.Count;
@@ -222,7 +237,7 @@ public class GameManager : MonoBehaviour
 
             }
 
-            SetNewCpuPlayer(playersList[index], cpu2DiceContainer, cpu2CpuBehaviour, cpu2Goal);
+            SetNewCpuPlayer(playersList[index], cpu2DiceContainer, cpu2CpuBehaviour, cpu2Goal, cpu2WinCrown);
 
 
             index = (index + 1) % playersList.Count;
@@ -234,18 +249,19 @@ public class GameManager : MonoBehaviour
 
             }
 
-            SetNewCpuPlayer(playersList[index], cpu3DiceContainer, cpu3CpuBehaviour, cpu3Goal);
+            SetNewCpuPlayer(playersList[index], cpu3DiceContainer, cpu3CpuBehaviour, cpu3Goal,cpu3WinCrown);
         }
 
     }
 
-    private void SetNewCpuPlayer(PlayerSO playerSO, DiceContainer cpuDiceContainer, CpuBehaviour cpuBehaviour, Goal cpuGoal)
+    private void SetNewCpuPlayer(PlayerSO playerSO, DiceContainer cpuDiceContainer, CpuBehaviour cpuBehaviour, Goal cpuGoal, WinCrown winCrown)
     {
         cpuDiceContainer.SetCanPlay();
         cpuBehaviour.CpuCanPlay();
         cpuDiceContainer.SetPlayerSO(playerSO);
         cpuBehaviour.SetPlayerSO(playerSO);
         cpuGoal.SetPlayerSO(playerSO);
+        winCrown.SetPlayerSO(playerSO);
     }
 
 
@@ -372,7 +388,7 @@ public class GameManager : MonoBehaviour
         tokensCanMove++;
     }
 
-    public void PlayerWin(PlayerSO playerSO)
+    public void PlayerWin(PlayerSO playerSO, string playerName)
     {
         foreach(PlayerSO player in playersList)
         {
@@ -383,14 +399,31 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        EndTurn();
-
+        winList.Add(playerName);
         playerWinPosition++;
 
-        OnPlayerWin?.Invoke(this, new OnPlayerWinEventArgs
+        int playersFinished = winList.Count;
+
+        if (PlayerStats.GetNumberPlayers() == 2 && playersFinished == 1) GameFinished();
+        else if (PlayerStats.GetNumberPlayers() == 4 && playersFinished == 3) GameFinished();
+        else
         {
-            playerSO = playerSO,
-            playerWinPosition = playerWinPosition
+            EndTurn();
+
+
+            OnPlayerWin?.Invoke(this, new OnPlayerWinEventArgs
+            {
+                playerSO = playerSO,
+                playerWinPosition = playerWinPosition
+            });
+        }
+    }
+
+    private void GameFinished()
+    {
+        OnGameFinished?.Invoke(this, new OnGameFinishedEventArgs
+        {
+            winList = winList
         });
     }
 

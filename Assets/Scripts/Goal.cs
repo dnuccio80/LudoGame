@@ -5,9 +5,11 @@ using UnityEngine;
 
 public class Goal : MonoBehaviour
 {
+    [SerializeField] private string playerName;
+    
     private PlayerSO playerSO;
 
-    private int tokensOnGoal;
+    private int tokensOnGoal = 3;
 
     public void SetPlayerSO(PlayerSO _playerSO)
     {
@@ -20,7 +22,7 @@ public class Goal : MonoBehaviour
 
         if (tokensOnGoal == 4)
         {
-            GameManager.instance.PlayerWin(playerSO);
+            GameManager.instance.PlayerWin(playerSO, playerName);
             SoundManager.Instance.EmitWinningSound();
         }
         else
