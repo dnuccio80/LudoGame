@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameFinishedUI : MonoBehaviour
 {
@@ -11,6 +12,15 @@ public class GameFinishedUI : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI[] positionsTextArray;
     [SerializeField] private TextMeshProUGUI congratsText;
+    [SerializeField] private Button mainMenuButton;
+
+    private void Awake()
+    {
+        mainMenuButton.onClick.AddListener(() =>
+        {
+            Loader.Load(Loader.State.MainMenuScene);
+        });
+    }
 
     private void Start()
     {
@@ -54,6 +64,7 @@ public class GameFinishedUI : MonoBehaviour
     private void Show()
     {
         gameObject.SetActive(true);
+        mainMenuButton.Select();
     }
 
     private void Hide()
