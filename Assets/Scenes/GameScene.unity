@@ -1133,6 +1133,7 @@ GameObject:
   - component: {fileID: 140225911}
   - component: {fileID: 140225910}
   - component: {fileID: 140225909}
+  - component: {fileID: 140225914}
   m_Layer: 5
   m_Name: MainMenuButton
   m_TagString: Untagged
@@ -1272,6 +1273,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 140225907}
   m_CullTransparentMesh: 1
+--- !u!114 &140225914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140225907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 330644552}
+          m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+          m_MethodName: EmitPopSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 15
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 330644552}
+          m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+          m_MethodName: EmitPopSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &143564934
 GameObject:
   m_ObjectHideFlags: 0
@@ -2965,7 +3011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -3143,7 +3189,7 @@ MonoBehaviour:
   goalSound: {fileID: 8300000, guid: c7e3f75254ddb744895e7d309d7a7bf5, type: 3}
   popSound: {fileID: 8300000, guid: 53be3edc38f2da349b8ba657cf204b26, type: 3}
   rollDiceSound: {fileID: 8300000, guid: 07af3aa1ebd791d4f803fa04a1b5ef95, type: 3}
-  startGameSound: {fileID: 8300000, guid: 65ea3db4aea05b14d91a89c49d94a150, type: 3}
+  startGameSound: {fileID: 8300000, guid: 9d49b865b3d8de24e96bc4b3ec1f9774, type: 3}
   secureZoneSound: {fileID: 8300000, guid: fc59f8fda6a6c8542a98257555e0e488, type: 3}
   startTurnSound: {fileID: 8300000, guid: 33929daa27689594a9b0e57d04395fe4, type: 3}
   winningSound: {fileID: 8300000, guid: 9a45fae87954e314189ca1b4650a565a, type: 3}
@@ -6009,24 +6055,24 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.0141509175, g: 1, b: 0.9810803, a: 1}
-        key1: {r: 0.012329655, g: 0.972549, b: 0, a: 0}
-        key2: {r: 0, g: 0, b: 0, a: 0}
-        key3: {r: 0, g: 0, b: 0, a: 0}
+        key0: {r: 0, g: 1, b: 0.98041606, a: 1}
+        key1: {r: 0, g: 0.9150943, b: 0.8985302, a: 0.48235294}
+        key2: {r: 0, g: 0.9150943, b: 0.8985302, a: 0}
+        key3: {r: 0, g: 0.9150943, b: 0.8985302, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
         ctime0: 0
         ctime1: 65535
-        ctime2: 0
-        ctime3: 0
+        ctime2: 65535
+        ctime3: 65535
         ctime4: 0
         ctime5: 0
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 64957
+        atime1: 65535
         atime2: 0
         atime3: 0
         atime4: 0
@@ -6039,17 +6085,17 @@ ParticleSystem:
         m_NumAlphaKeys: 2
       minGradient:
         serializedVersion: 2
-        key0: {r: 0.50502586, g: 0, b: 1, a: 1}
-        key1: {r: 1, g: 0, b: 0.8834677, a: 0}
-        key2: {r: 0, g: 0, b: 0, a: 0}
+        key0: {r: 0.8232355, g: 0, b: 1, a: 1}
+        key1: {r: 0.7963095, g: 0, b: 1, a: 0.5019608}
+        key2: {r: 0.7963095, g: 0, b: 1, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
-        ctime0: 578
+        ctime0: 0
         ctime1: 65535
-        ctime2: 0
+        ctime2: 65535
         ctime3: 0
         ctime4: 0
         ctime5: 0

@@ -9,7 +9,7 @@ public class Goal : MonoBehaviour
     
     private PlayerSO playerSO;
 
-    private int tokensOnGoal = 3;
+    private int tokensOnGoal;
 
     public void SetPlayerSO(PlayerSO _playerSO)
     {
