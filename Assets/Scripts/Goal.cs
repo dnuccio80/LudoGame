@@ -9,11 +9,22 @@ public class Goal : MonoBehaviour
     
     private PlayerSO playerSO;
 
-    private int tokensOnGoal;
+    private int tokensOnGoal = 3;
 
     public void SetPlayerSO(PlayerSO _playerSO)
     {
         playerSO = _playerSO;
+        AddToGoalList();
+    }
+
+    private void AddToGoalList()
+    {
+        GameManager.instance.UpdateGoalList(this);
+    }
+
+    public string GetPlayerName()
+    {
+        return playerName;
     }
 
     public void TokenOnGoal()

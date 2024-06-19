@@ -17,6 +17,17 @@ public class FireworksParticleSystem : MonoBehaviour
         fireworksPS = GetComponent<ParticleSystem>();
     }
 
+    private void Start()
+    {
+        GameManager.instance.OnGameFinished += GameManager_OnGameFinished;
+        Hide();
+    }
+
+    private void GameManager_OnGameFinished(object sender, GameManager.OnGameFinishedEventArgs e)
+    {
+        Show();
+    }
+
     private void Update()
     {
 
@@ -30,7 +41,17 @@ public class FireworksParticleSystem : MonoBehaviour
     private void EmitSound(AudioClip clip)
     {
         AudioSource.PlayClipAtPoint(clip, Vector3.zero);
-    }     
+    }
 
+    private void Show()
+    {
+        gameObject.SetActive(true);
+        fireworksPS.Play();
+    }
+
+    private void Hide()
+    {
+        gameObject.SetActive(false);
+    }
 
 }

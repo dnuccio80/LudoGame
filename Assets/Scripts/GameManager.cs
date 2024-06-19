@@ -16,7 +16,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private List<PlayerSO> playersList;
 
     private List<PlayerSO> CpuPlayers = new List<PlayerSO>();
-    private List<string> winList = new List<string>();
+    private List<string> finishPositionsList = new List<string>();
+    private List<Goal> goalList = new List<Goal>();
 
     public event EventHandler OnGameStateChanged;
     public event EventHandler OnMoveAutomatically;
@@ -41,7 +42,6 @@ public class GameManager : MonoBehaviour
         MovePieceState,
         MovingPiece,
         EndTurn,
-        //GameFinished
     }
 
     [Header("Token Script")]
@@ -254,6 +254,11 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public void UpdateGoalList(Goal goal)
+    {
+        if(!goalList.Contains(goal)) goalList.Add(goal);
+    }
+
     private void SetNewCpuPlayer(PlayerSO playerSO, DiceContainer cpuDiceContainer, CpuBehaviour cpuBehaviour, Goal cpuGoal, WinCrown winCrown)
     {
         cpuDiceContainer.SetCanPlay();
@@ -399,10 +404,10 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        winList.Add(playerName);
+        finishPositionsList.Add(playerName);
         playerWinPosition++;
 
-        int playersFinished = winList.Count;
+        int playersFinished = finishPositionsList.Count;
 
         if (PlayerStats.GetNumberPlayers() == 2 && playersFinished == 1) GameFinished();
         else if (PlayerStats.GetNumberPlayers() == 4 && playersFinished == 3) GameFinished();
@@ -421,10 +426,30 @@ public class GameManager : MonoBehaviour
 
     private void GameFinished()
     {
+        foreach(Goal goal in goalList)
+        {
+            if (!finishPositionsList.Contains(goal.GetPlayerName())) finishPositionsList.Add(goal.GetPlayerName());
+        }
+
         OnGameFinished?.Invoke(this, new OnGameFinishedEventArgs
         {
-            winList = winList
+            winList = finishPositionsList
         });
+    }
+
+    public int GetPlayerFinishPosition()
+    {
+        int playerFinishPosition = 0;
+
+        for(int i = 0; i < finishPositionsList.Count; i++)
+        {
+            if (finishPositionsList[i] == playerGoal.GetPlayerName())
+            {
+                playerFinishPosition = i + 1;
+            }
+        }
+
+        return playerFinishPosition;
     }
 
     public bool GetCpuCanPlayMoreThanOneMovement()
