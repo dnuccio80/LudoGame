@@ -88,6 +88,14 @@ public class SoundManager : MonoBehaviour
         AudioSource.PlayClipAtPoint(winningSound,Vector3.zero);
     }
 
+    public void TurnOffSound()
+    {
+        audioSource.volume = 0f;
+    }
 
+    public void TurnOnSound()
+    {
+        audioSource.volume = 0.1f;
+    }
 
 }
