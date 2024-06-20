@@ -35,7 +35,7 @@ public class TokenVisual : MonoBehaviour
 
     private void Update()
     {
-        spriteRenderer.sortingOrder = Mathf.RoundToInt(tokenScript.gameObject.transform.position.y * -1);
+        spriteRenderer.sortingOrder = Mathf.RoundToInt(tokenScript.gameObject.transform.position.y * -3);
 
     }
 }
